@@ -6,13 +6,17 @@
 	<title></title>
 	<style>
 		body{
-			background:pink;color:#000;
+			background:#000;color:#fff;
 		}
 	</style>
 </head>
 <body>
-<embed src="an.mp3" width=0 height=0 type=audio/mpeg loop="1" autostart="true" volume="0"></embed> 
-<div id="app">
+ <audio id="audio" autoplay='autoplay' loop='loop'>
+    <source src="an.mp3" type="audio/ogg">
+    <source src="an.mp3" type="audio/mpeg">
+</audio>
+<!-- <embed src="an.mp3" width=0 height=0 type=audio/mpeg loop="1" autostart="true" volume="0"></embed>  -->
+<div id="app">an.mp3
 
 </div>
 
@@ -23,7 +27,7 @@
 <script>
 var sty = ``;
 var code = `     <h2>2018悄然而至...</h2>	
-			<h2>柳青祝大家在新的一年身体健康，</h2>
+			<h2>传秀祝大家在新的一年身体健康，</h2>
 			<h2>心想事成,</h2> 
 			<h2>阖家团圆,</h2>
 			<h2>狗年吉祥行大运</h2>
@@ -38,6 +42,7 @@ setInterval(function(){
 	style.innerHTML = sty.substring(0,n);
 	n++
 },150)
+
 
 </script>
 </body>
