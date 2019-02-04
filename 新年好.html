@@ -5,30 +5,43 @@
     <title></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style id="app">
-		 body{background:#000;color:#fff;}
+		 body{
+            width:100%;
+            height:100%;
+
+            color:#fff;
+            background-image:url(002.jpg);
+
+            background-size:cover;
+        }
+        b{
+            color:red;
+        }
+
     </style>
 </head>
 <body>
+<embed src="002.mp3" type=audio/mpeg width="0" height="0" loop="-1" autostart="false" volume="0"></embed>
 <div id="main"></div>
 
-
-
 <script>
-    var code =`<h2>最初的最初有几份真挚的感情摆在我面前</h2>
+    var code =`<h2>最初的最初...</h2>
+    <h2>有一份真挚的感情摆在我面前</h2>
     <h2>我没有留意</h2>
     <h2>直到后来的后来我才发现</h2>
     <h2>如果上天再给我一次机会</h2>
-    <h2>我一定会对你们说四个字：</h2
+    <h2>我一定会对你说四个字：</h2>
     <h2>新年快乐！</h2>
     <h2>......</h2>
-    <h2>如果在这快乐之上加上一个期限</h2>
-     <h2>我希望是...一万年~~~(*^▽^*)</h2>`;
+    <h2>如果在这快乐之上再加上一个期限</h2>
+     <h2>我希望是......</h2>
+     <h2><b>一~万~年~</b>(*^▽^*)~<h2/>`;
     var n=0;
     console.log(code.length);
     setInterval(function(){
       main.innerHTML=code.substring(0,n);
         n=n+1;
-    },150)
+    },120)
 </script>
 </body>
 </html>
