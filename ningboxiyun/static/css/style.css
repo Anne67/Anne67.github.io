@@ -1,0 +1,394 @@
+/*自定义样式*/
+/*首页导航部分*/
+.navbar{
+    margin-bottom: 0px;
+}
+.navbar a{
+    color:#595959;
+}
+.navbar li.active a{
+    color:#FEE123;
+}
+.navbar .navbar-brand{
+    position: relative;
+    width:110px;
+    height:40px;
+}
+.navbar .navbar-brand img{
+    position: absolute;
+    left:15px;
+    top:5px;
+
+}
+.navbar-toggle{
+    /*border:1px solid #FEE123;*/
+}
+.navbar-toggle .icon-bar{
+    background:#595959;
+}
+.navbar ul {
+    padding:0;
+    margin:0;
+    font-size:0;
+}
+.collapse ul li{
+    display: block;
+}
+.navbar li {
+    font-size:1.47rem;
+    padding:5px 5px 5px 5px;
+    /*display: inline-block;*/
+    position:relative;
+    cursor: pointer;
+    transition: all 0.5s;
+    color:#595959;
+}
+.navbar li::before {
+    content:'';
+    display:block;
+    position:absolute;
+    width:0%;
+    bottom:0;
+    left:100%;
+    border-bottom: 2px solid #FEE123;
+    transition: all 0.5s;
+}
+.navbar li:hover::before {
+    left:0;
+    width:100%;
+}
+.navbar li:hover{
+    color:#FEE123;
+}
+.navbar li:hover ~ li::before {
+    left:0;
+}
+
+.nav>li>a {
+    /* position: relative; */
+    display: block;
+    padding: 10px 15px;
+}
+
+
+/*.w{*/
+    /*width:992px;*/
+    /*margin:0 auto;*/
+/*}*/
+/*.navbar-default .navbar-toggle .icon-bar {*/
+    /*background-color: #888;*/
+/*}*/
+/*.navbar-custom {*/
+    /*background-color:#000;*/
+    /*border-color:#FEE123;*/
+/*}*/
+
+/*首页banner*/
+.home .banner{
+    position: relative;
+    /*height:942px;*/
+    /*background-size:contain;*/
+    /*background: url('../img/home/banner.jpg');*/
+}
+.home .mask{
+    left: 0;
+    top:0;
+    width:100%;
+    height:100%;
+    background-color: #0f0f0f;
+    filter:alpha(opacity=65);
+    -moz-opacity:0.65;
+    opacity: 0.65;
+}
+.home .banner .pic{
+    left: 0;
+    top:0;
+    width:100%;
+    height:100%;
+}
+.home .banner .pic img.hello{
+    width:26%;
+    left:18%;
+    top:16%;
+}
+.home .banner .pic img.weare{
+    width:21%;
+    left:23%;
+    top:38%;
+}
+.home .banner .pic img.yuan{
+    width:16%;
+    left:41%;
+    top:46%;
+    /*transform: translateX(-50%);*/
+}
+.home .banner .pic img.dream{
+    width:26%;
+    left:60%;
+    top:70%;
+}
+
+/*首页公司简介*/
+.home .companyPro{
+    background:#FEE123;
+    text-align: center;
+}
+.home .companyPro .title{
+    position: relative;
+    padding:3.8% 0 4.3% 0;
+}
+.home .companyPro .img{
+    position: absolute;
+    left: 50%;
+    bottom:0.5%;
+    animation: updown 1s linear infinite;
+}
+.home .companyPro small{
+    color:#fff;
+}
+.home .companyPro h2{
+    margin:0;
+}
+.home .b_banner_content{
+    position: relative;
+    /*left:50%;*/
+    /*transform: translateX(-50%);*/
+    /*width:65%;*/
+    padding:20% 15px;
+    margin:0 auto;
+}
+.home .b_banner_content b{
+    color:#FEE123;
+}
+.home .b_banner{
+    position: relative;
+    background-image: url(../img/home/banner2.jpg);
+    background-size: 100% 100%;
+}
+.home .b_banner_content p {
+    text-indent: 2rem;
+    color: #FEFEFE;
+    line-height: 1.8;
+    letter-spacing: 1px;
+}
+/*底部样式*/
+.footer{
+    padding:15px 0;
+    background-color: #333333;
+    color:#FEFEFE;
+    font-size: 12px;
+}
+.footer .footer_line{
+    width:100%;
+    height:2rem;
+    border-top: 1px dashed gray;
+    border-bottom:1px solid gray;
+}
+.footer .copyText{
+    text-align: center;
+    padding-top:15px;
+    /*margin:0 auto;*/
+}
+.footer .bottom_logo{
+    text-align: center;
+    margin-top: 1.8rem;
+}
+.footer .bottom_logo img.bottom_logo_img{
+    width:90%;
+}
+.footer .bottom_logo .bottom_logo_title{
+    width:90%;
+    margin: 0 auto;
+    display: flex;
+    padding:15px 0 0 0;
+    justify-content: space-between;
+}
+.footer .bottom_logo .ioc{
+    width:90%;
+    margin: 0 auto;
+    display: flex;
+    padding:15px 0;
+    justify-content: space-between;
+}
+.footer .bottom_logo .ioc img{
+    width:2.2rem;
+}
+.footer .dl-contact{
+    text-align: left;
+    margin-top:2.52rem;
+}
+.footer .dl-contact a{
+    color:#FEFEFE;
+    text-decoration: none;
+}
+.footer .dl-contact a:hover{
+    color:#FEE123;
+    transform: translateX(-100px);
+
+}
+.footer .dl-contact dd a:hover{
+    transition: margin-left 1s;
+    margin-left:-30px;
+}
+.footer .dl-contact dt{
+    line-height: 1.8;
+}
+.footer .dl-contact dd{
+    margin-left:45px;
+    line-height: 1.65;
+}
+.footer .dl-contact dt img{
+    margin:0.8rem;
+    width: 2rem;
+}
+
+/*关于我们界面*/
+.about{
+    color:#595959;
+}
+.about .top_banner{
+    width:100%;
+}
+.about .top_banner img{
+    width:100%;
+}
+.about .content{
+    text-align: center;
+    /*margin-top:30px;*/
+    /*margin-bottom: 15px;*/
+}
+.about .content .jian{
+    height:100%;
+    position: absolute;
+    top:0;
+}
+.about .content .jian_left{
+    /*left:38%;*/
+    animation: toleft 1s ease-in infinite;
+}
+
+.about .content .jian_right{
+    /*right:38%;*/
+    animation: toright 1s ease-in infinite;
+}
+.about .content .content_text{
+    text-align:left;
+    line-height: 1.8;
+    letter-spacing: 1px;
+    /*width:70%;*/
+    margin:0 auto;
+}
+.about .content.our_team .our_team_pic{
+    padding-bottom: 15px;
+}
+.about .content.our_team .our_team_pic img{
+    width:100%;
+}
+.about .bottom_banner{
+    position: relative;
+}
+.about .bottom_banner .mask{
+    width:100%;
+    height:100%;
+    background: #FEE123;
+    background:rgba(0,0,0,.2);
+}
+.about .bottom_slogan{
+    text-align: center;
+    margin:5% auto;
+}
+/*地图样式*/
+.about .demo_main { padding: 10px 15px 15px 30px; color: #000000; font-size: 12px;}
+.about .demo_title { padding: 10px; margin-bottom: 10px; background-color: #D3D8E0; border: solid 1px gray; }
+/*.about .demo_content { padding: 10px; margin-bottom: 10px; border: solid 1px gray; }*/
+.about fieldset { border: 1px solid gray; }
+@keyframes updown {
+    from{
+        bottom:8%
+    }
+    to{
+        bottom:1%
+    }
+}
+@media (max-width: 2000px){
+    .tab-p {
+        font-size:18px;
+    }
+    @keyframes toleft {
+        from{
+            left:38%;
+        }
+        to{
+            left:40%;
+        }
+    }
+    @keyframes toright {
+        from{
+            right:38%;
+        }
+        to{
+            right:40%;
+        }
+    }
+}
+@media (max-width: 992px) {
+    .companyPro .img{
+        width:50px;
+    }
+    .tab-h2 {
+        font-size:24px;
+    }
+    .tab-p {
+        font-size:18px;
+    }
+    .tab-s {
+        font-size: 16px;
+    }
+    @keyframes toleft {
+        from{
+            left:38%;
+        }
+        to{
+            left:40%;
+        }
+    }
+    @keyframes toright {
+        from{
+            right:38%;
+        }
+        to{
+            right:40%;
+        }
+    }
+}
+@media (max-width: 768px){
+    .companyPro .img{
+        width:20px;
+    }
+    .tab-h2 {
+        font-size:16px;
+    }
+    .tab-p {
+        font-size:12px;
+    }
+    .tab-s {
+        font-size: 12px;
+    }
+    @keyframes toleft {
+        from{
+            left:32%;
+        }
+        to{
+            left:36%;
+        }
+    }
+    @keyframes toright {
+        from{
+            right:32%;
+        }
+        to{
+            right:36%;
+        }
+    }
+}
+

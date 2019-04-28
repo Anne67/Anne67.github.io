@@ -1,0 +1,12 @@
+.pa{
+    position: absolute;
+}
+a{
+    text-decoration: none;
+}
+.mc_active{
+    color:#FEE123;!important;
+}
+.mc{
+    color:#595959;!important;
+}
