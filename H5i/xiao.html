@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=640">
+    <link rel="stylesheet" href="xiao.css">
+    <script>
+        function initPage() {
+            var objLoading = document.getElementById("load");
+            if (objLoading != null) {
+                objLoading.style.display = "none";
+                document.getElementById("pageload").style.display = "block";
+                voldown = document.getElementById("myaudio");
+                voldown.volume = "0.2";
+            }
+        }
+    </script>
+</head>
+<body onLoad="initPage()">
+<img width="0" height="0" src="image/enjoy.jpg">
+<div id="load">
+    <div class="spinner">囍</div>
+    <div style="width:100%; text-align:center"><br>
+        Loadding...
+    </div>
+    <div style=" width:100%; text-align:center; font-size:36px"><br>
+        BRUCE&YOGA
+    </div>
+    <div style=" width:100%; text-align:center; font-size:24px;">MIX&MATCH</div>
+</div>
+<div style="display:none;" id="pageload">
+
+    <audio id="myaudio"
+           src="http://www.17sucai.com/preview/27774/2014-03-19/jQuery+Html5%E5%AE%9E%E7%8E%B0%E5%94%AF%E7%BE%8E%E8%A1%A8%E7%99%BD%E5%8A%A8%E7%94%BB%E4%BB%A3%E7%A0%81/renxi.mp3"
+           autoplay controls hidden="true" style="position:absolute; z-index:0; opacity:0">
+    </audio>
+
+    <div id="pic01"><img src="image/1.jpg" class="img"></div>
+    <div id="pic02"><img src="image/2.jpg" class="img"> <img id="biglogo" src="image/logo.png"></div>
+    <!--<div id="pic03"><img src="image/5.jpg" class="img"></div>-->
+    <!--<div id="pic04">-->
+        <!--<img id="p1bg" src="images/firstbg.jpg">-->
+        <!--<img id="biglogo" src="images/logo.png">-->
+    <!--</div>-->
+
+
+    <div id="big_C" class="buttomtreeanim">
+        <a href="index.html"><img id="p1leaf01" src="image/tree-cn.png"></a>
+        <img class="p1leaf0203" src="image/tree-replay.png" onClick="location.reload()">
+    </div>
+</div>
+
+</body>
+</html>
