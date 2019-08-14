@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a782f0e1-2c16-4f88-b1cb-bcc1de2bb508" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/H5i/index5.html" afterPath="$PROJECT_DIR$/H5i/index6.html" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/H5i/index6.html" afterPath="$PROJECT_DIR$/H5i/index0.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -16,11 +17,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index6.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/H5i/index6.html">
+      <file leaf-file-name="index0.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/H5i/index0.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="344">
-              <caret line="275" column="41" lean-forward="false" selection-start-line="275" selection-start-column="41" selection-end-line="275" selection-end-column="41" />
+            <state relative-caret-position="318">
+              <caret line="274" column="42" lean-forward="true" selection-start-line="274" selection-start-column="42" selection-end-line="274" selection-end-column="42" />
               <folding>
                 <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -123,6 +124,8 @@
         <option value="$PROJECT_DIR$/H5i/index1.html" />
         <option value="$PROJECT_DIR$/H5i/index4.html" />
         <option value="$PROJECT_DIR$/H5i/index5.html" />
+        <option value="$PROJECT_DIR$/H5i/index6.html" />
+        <option value="$PROJECT_DIR$/H5i/index0.html" />
       </list>
     </option>
   </component>
@@ -225,12 +228,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1565753666960</updated>
-      <workItem from="1565753668445" duration="8309000" />
+      <workItem from="1565753668445" duration="8424000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8309000" />
+    <option name="totallyTimeSpent" value="8424000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -350,10 +353,10 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/H5i/index6.html">
+    <entry file="file://$PROJECT_DIR$/H5i/index0.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="344">
-          <caret line="275" column="41" lean-forward="false" selection-start-line="275" selection-start-column="41" selection-end-line="275" selection-end-column="41" />
+        <state relative-caret-position="318">
+          <caret line="274" column="42" lean-forward="true" selection-start-line="274" selection-start-column="42" selection-end-line="274" selection-end-column="42" />
           <folding>
             <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
