@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a782f0e1-2c16-4f88-b1cb-bcc1de2bb508" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/H5i/index0.html" afterPath="$PROJECT_DIR$/H5i/index0.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/H5i/index00.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -16,17 +16,27 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index0.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index0.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/H5i/index0.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="188">
-              <caret line="269" column="42" lean-forward="true" selection-start-line="269" selection-start-column="42" selection-end-line="270" selection-end-column="41" />
+            <state relative-caret-position="734">
+              <caret line="275" column="64" lean-forward="true" selection-start-line="275" selection-start-column="64" selection-end-line="275" selection-end-column="64" />
               <folding>
                 <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#aside#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index00.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/H5i/index00.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-15">
+              <caret line="125" column="0" lean-forward="true" selection-start-line="125" selection-start-column="0" selection-end-line="125" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -47,13 +57,6 @@
       </file>
       <file leaf-file-name="16.jpg" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/H5i/image/16.jpg">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="13.jpg" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/H5i/image/13.jpg">
           <provider selected="true" editor-type-id="images">
             <state />
           </provider>
@@ -115,6 +118,7 @@
         <option value="$PROJECT_DIR$/H5i/index5.html" />
         <option value="$PROJECT_DIR$/H5i/index6.html" />
         <option value="$PROJECT_DIR$/H5i/index0.html" />
+        <option value="$PROJECT_DIR$/H5i/index00.html" />
       </list>
     </option>
   </component>
@@ -160,12 +164,6 @@
             <path>
               <item name="Anne67.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="Anne67.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="H5i" type="462c0819:PsiDirectoryNode" />
-              <item name="image" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Anne67.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Anne67.github.io" type="462c0819:PsiDirectoryNode" />
               <item name="微信公众h5" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -189,6 +187,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\win 10\Desktop\mygithub\Anne67.github.io\H5i" />
       <recent name="C:\Users\win 10\Desktop\mygithub\Anne67.github.io\H5i\image" />
     </key>
   </component>
@@ -217,12 +216,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1565753666960</updated>
-      <workItem from="1565753668445" duration="8566000" />
+      <workItem from="1565753668445" duration="8816000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8566000" />
+    <option name="totallyTimeSpent" value="8816000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -355,14 +354,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/H5i/index0.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="269" column="42" lean-forward="true" selection-start-line="269" selection-start-column="42" selection-end-line="270" selection-end-column="41" />
+        <state relative-caret-position="734">
+          <caret line="275" column="64" lean-forward="true" selection-start-line="275" selection-start-column="64" selection-end-line="275" selection-end-column="64" />
           <folding>
             <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#aside#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/H5i/index00.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-15">
+          <caret line="125" column="0" lean-forward="true" selection-start-line="125" selection-start-column="0" selection-end-line="125" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
