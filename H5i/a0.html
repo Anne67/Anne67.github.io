@@ -157,7 +157,7 @@
     </aside>
     <audio src="//be-fe.github.io/static/audios/YouGotMe.mp3" autoplay="autoplay" loop="loop" id="autoplay"></audio>
     <div id="iSlider-arrow"></div>
-    <div id="iSlider-animal" style="display:none;"><img src="image/logo.png" alt=""></div>
+    <!--<div id="iSlider-animal" style="display:none;"><img src="image/logo.png" alt=""></div>-->
 
 
 <script src="./public/js/iSlider.js"></script>
@@ -185,18 +185,18 @@
         isLooping: true,
         animateType: 'card',
         oninitialized:function(){
-            setTimeout(function(){
-                document.getElementById('iSlider-animal').style.display = 'block';
-            },1000)
+            // setTimeout(function(){
+            //     document.getElementById('iSlider-animal').style.display = 'block';
+            // },1000)
         },
         onslidechange: function (idx) {
-            if (idx === 0) {
-                setTimeout(function(){
-                    document.getElementById('iSlider-animal').style.display = 'block';
-                },1000)
-            }else{
-                document.getElementById('iSlider-animal').style.display = 'none';
-            }
+            // if (idx === 0) {
+            //     setTimeout(function(){
+            //         document.getElementById('iSlider-animal').style.display = 'block';
+            //     },1000)
+            // }else{
+            //     document.getElementById('iSlider-animal').style.display = 'none';
+            // }
             if (this.isLooping === false) {
                 if (idx === this.data.length - 1) {
                     document.getElementById('iSlider-arrow').style.display = 'none';
