@@ -5,19 +5,6 @@
     <title>诚邀加盟</title>
     <meta name="viewport"
           content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no"/>
-    <!--/*图片预加载*/-->
-    <link rel="prefetch" href="images/1.jpg"/>
-    <link rel="prefetch" href="images/2.jpg"/>
-    <link rel="prefetch" href="images/3.jpg"/>
-    <link rel="prefetch" href="images/4.jpg"/>
-    <link rel="prefetch" href="images/5.jpg"/>
-    <link rel="prefetch" href="images/6.jpg"/>
-    <link rel="prefetch" href="images/7.jpg"/>
-    <link rel="prefetch" href="images/8.jpg"/>
-    <link rel="prefetch" href="images/9.jpg"/>
-    <link rel="prefetch" href="images/10.jpg"/>
-    <link rel="prefetch" href="images/11.jpg"/>
-    <link rel="prefetch" href="images/12.jpg"/>
 
     <link href="public/css/iSlider.css" rel="stylesheet">
     <style>
@@ -139,6 +126,9 @@
                 opacity: 0;
             }
         }
+        .hidden{
+            display:none;
+        }
 
     </style>
     <script>
@@ -159,7 +149,34 @@
     <div id="iSlider-arrow"></div>
     <!--<div id="iSlider-animal" style="display:none;"><img src="image/logo.png" alt=""></div>-->
 
-
+    <div class="hidden">
+        <script type="text/javascript">
+            <!--//--><![CDATA[//><!--
+            var images = new Array()
+            function preload() {
+                for (i = 0; i < preload.arguments.length; i++) {
+                    images[i] = new Image();
+                    images[i].src = preload.arguments[i];
+                }
+                console.log(images)
+            }
+            preload(
+                "images/1.jpg",
+                "images/2.jpg",
+                "images/3.jpg",
+                "images/4.jpg",
+                "images/5.jpg",
+                "images/6.jpg",
+                "images/7.jpg",
+                "images/8.jpg",
+                "images/9.jpg",
+                "images/10.jpg",
+                "images/11.jpg",
+                "images/12.jpg"
+            )
+            //--><!]]>
+        </script>
+    </div>
 <script src="./public/js/iSlider.js"></script>
 <script id="show-code">
     var list = [
