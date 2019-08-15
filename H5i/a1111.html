@@ -138,7 +138,7 @@
             right: 0;
             top: 42%;
             z-index: 10000;
-            -webkit-animation: nextPage1 3.2s linear infinite;
+            -webkit-animation: nextPage1 3.8s linear infinite;
         }
 
         @-webkit-keyframes nextPage1 {
@@ -159,7 +159,7 @@
             position: absolute;
             width: 7em;
             height: 2.5em;
-            right: 45px;
+            right: 40px;
             top: 40%;
             z-index: 10000;
             -webkit-animation: nextPage1 3.9s linear infinite;
@@ -184,22 +184,22 @@
             width: 9.2em;
             height: 3.1em;
             right: 36px;
-            bottom: 26%;
+            bottom: 25%;
             z-index: 10000;
             -webkit-animation: nextPage1 4.2s linear infinite;
         }
 
         @-webkit-keyframes nextPage3 {
             0% {
-                -webkit-transform: translateX(40px);
+                -webkit-transform: translateX(15px);
                 opacity: 1;
             }
             50% {
-                -webkit-transform: translateY(12px);
+                -webkit-transform: translateX(10px);
                 opacity: 0;
             }
             100% {
-                -webkit-transform: translateX(40px);
+                -webkit-transform: translateX(15px);
                 opacity: 1;
             }
         }
@@ -257,10 +257,10 @@
             },200);
             setTimeout(function(){
                 document.getElementById('iSlider-animal2').style.display = 'block';
-            },400);
+            },300);
             setTimeout(function(){
                 document.getElementById('iSlider-animal3').style.display = 'block';
-            },600);
+            },400);
         },
         onslidechange: function (idx) {
             if (idx === 0) {
@@ -269,10 +269,10 @@
                 },200);
                 setTimeout(function(){
                     document.getElementById('iSlider-animal2').style.display = 'block';
-                },400);
+                },300);
                 setTimeout(function(){
                     document.getElementById('iSlider-animal3').style.display = 'block';
-                },600);
+                },400);
             }else{
                 document.getElementById('iSlider-animal1').style.display = 'none';
                 document.getElementById('iSlider-animal2').style.display = 'none';
