@@ -159,10 +159,10 @@
             position: absolute;
             width: 7em;
             height: 2.5em;
-            right: 50px;
+            right: 45px;
             top: 40%;
             z-index: 10000;
-            -webkit-animation: nextPage1 3.3s linear infinite;
+            -webkit-animation: nextPage1 3.9s linear infinite;
         }
 
         @-webkit-keyframes nextPage2 {
@@ -184,9 +184,9 @@
             width: 9.2em;
             height: 3.1em;
             right: 36px;
-            bottom: 28%;
+            bottom: 26%;
             z-index: 10000;
-            -webkit-animation: nextPage1 3.5s linear infinite;
+            -webkit-animation: nextPage1 4.2s linear infinite;
         }
 
         @-webkit-keyframes nextPage3 {
@@ -195,7 +195,7 @@
                 opacity: 1;
             }
             50% {
-                -webkit-transform: translateY(6px);
+                -webkit-transform: translateY(12px);
                 opacity: 0;
             }
             100% {
@@ -254,25 +254,25 @@
         oninitialized:function(){
             setTimeout(function(){
                 document.getElementById('iSlider-animal1').style.display = 'block';
-            },800);
+            },200);
             setTimeout(function(){
                 document.getElementById('iSlider-animal2').style.display = 'block';
-            },1000);
+            },400);
             setTimeout(function(){
                 document.getElementById('iSlider-animal3').style.display = 'block';
-            },1100);
+            },600);
         },
         onslidechange: function (idx) {
             if (idx === 0) {
                 setTimeout(function(){
                     document.getElementById('iSlider-animal1').style.display = 'block';
-                },800);
+                },200);
                 setTimeout(function(){
                     document.getElementById('iSlider-animal2').style.display = 'block';
-                },1000);
+                },400);
                 setTimeout(function(){
                     document.getElementById('iSlider-animal3').style.display = 'block';
-                },1100);
+                },600);
             }else{
                 document.getElementById('iSlider-animal1').style.display = 'none';
                 document.getElementById('iSlider-animal2').style.display = 'none';
