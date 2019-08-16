@@ -285,21 +285,21 @@
             margin: 0 auto;
             top: 42%;
             z-index: 10000;
-            -webkit-animation: nextPage7 2s linear forwards;
+            -webkit-animation: nextPage7 1.8s ease forwards;
         }
         @-webkit-keyframes nextPage7 {
             0% {
                 -webkit-transform: rotate(0deg) scale(0.2);
                 opacity: 0.88;
             }
-            50% {
-                -webkit-transform: rotate(90deg) scale(1.8);
+            30% {
+                -webkit-transform: rotate(720deg) scale(1.8);
             }
             75% {
-                -webkit-transform: rotate(180deg) scale(0.8);
+                -webkit-transform: rotate(1080deg) scale(0.2);
             }
             100% {
-                -webkit-transform:rotate(360deg) scale(1);
+                -webkit-transform:rotate(1080deg) scale(1);
                 opacity: 1;
             }
         }
@@ -372,9 +372,9 @@
             $block('p1-a3',400);
             $block('p1-a4',100);
             $block('p1-a5',100);
-            $block('p1-a6',100);
-            $block('p1-a7',100);
-            $block('p1-a8',500);
+            $block('p1-a6',600);
+            $block('p1-a7',1600);
+            $block('p1-a8',1100);
         },
         onslidechange: function (idx) {
             if (idx === 0) {
@@ -383,9 +383,9 @@
                 $block('p1-a3',400);
                 $block('p1-a4',100);
                 $block('p1-a5',100);
-                $block('p1-a6',100);
-                $block('p1-a7',100);
-                $block('p1-a8',100);
+                $block('p1-a6',600);
+                $block('p1-a7',1600);
+                $block('p1-a8',1100);
             }else{
                 $none('p1-a1');
                 $none('p1-a2');
