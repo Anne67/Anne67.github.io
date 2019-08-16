@@ -8,6 +8,9 @@
     <link href="public/css/iSlider.css" rel="stylesheet">
     <link href="https://cdn.bootcss.com/animate.css/3.7.2/animate.css" rel="stylesheet">
     <style>
+        html,body{
+            /*font-size: 62.5%;*/
+        }
 
         body {
             margin: 0;
@@ -125,11 +128,18 @@
                 opacity: 0;
             }
         }
-        /*第一屏动画*/
         .pic img{
             width:100%;
             height:100%;
         }
+        .bg_fz{
+            background:#ED574A;
+            color:#fff;
+            font-size: 0.8em;
+            line-height: 1.6em;
+            border-radius: 6px;
+        }
+        /*第一屏动画*/
         #p1-a1{
             position: absolute;
             width: 4.2em;
@@ -303,6 +313,197 @@
                 opacity: 1;
             }
         }
+        /*第二屏动画*/
+        #p2-a1{
+            position: absolute;
+            width: 10em;
+            height: 1.5em;
+            left: 2.08rem;
+            right: 0;
+            top: 20%;
+            z-index: 10000;
+            -webkit-animation: page2_1 0.8s ease-in-out forwards;
+        }
+        @-webkit-keyframes page2_1{
+            0% {
+                -webkit-transform: translateX(-100px);
+                opacity: 0.88;
+            }
+            100% {
+                -webkit-transform: translateX(0px);
+                opacity: 0.88;
+            }
+        }
+        #p2-a2{
+            position: absolute;
+            width: 16em;
+            height: 1.5em;
+            left: 2.08rem;
+            right: 0;
+            top: 31%;
+            z-index: 10000;
+            -webkit-animation: page2_1 0.8s ease-in-out forwards;
+        }
+        #p2-a3{
+            position: absolute;
+            width: 16em;
+            height: 1.5em;
+            left: 2.08rem;
+            right: 0;
+            top: 40%;
+            z-index: 10000;
+            -webkit-animation: page2_1 0.8s ease-in-out forwards;
+        }
+        #p2-a4{
+            position: absolute;
+            width: 16em;
+            height: 1.5em;
+            left: 2.08rem;
+            right: 0;
+            top: 50%;
+            z-index: 10000;
+            -webkit-animation: page2_1 0.8s ease-in-out forwards;
+        }
+        .ff{
+            font-size: 14px;
+            color:#98122B;
+            position: absolute;
+            width: 80%;
+            line-height: 1.2em;
+            margin:0 auto;
+            left:0;
+            right: 0;
+            z-index: 10000;
+            -webkit-animation: page2_1 1.5s ease-in-out forwards;
+        }
+        @-webkit-keyframes page2_1 {
+            0% {
+                -webkit-transform:translateY(10px);
+                opacity: 0;
+            }
+            100% {
+                -webkit-transform:translateY(0px);
+                opacity: 1;
+            }
+        }
+        #p2-a5{
+            top: 25%;
+        }
+        #p2-a6{
+            top: 35%;
+        }
+        #p2-a7{
+            top:44%;
+        }
+        #p2-a8{
+            top: 55%;
+        }
+
+        #p2-a9{
+            position: absolute;
+            bottom: 12%;
+            width:16.5em;
+            padding:1em;
+            height:3.7em;
+            margin:0 auto;
+            -webkit-animation: page2_9 1.5s ease-in forwards;
+        }
+        @-webkit-keyframes page2_9 {
+            0% {
+                -webkit-transform:translateY(200px);
+                opacity: 0;
+            }
+            100% {
+                -webkit-transform:translateY(0px);
+                opacity: 1;
+            }
+        }
+        /*第三屏动画*/
+        /*第三屏动画*/
+        span.name{
+            position: absolute;
+            text-align: center;
+            display: block;
+            padding:0px 5px;
+            left:50%;
+            transform: translateX(-50%);
+        }
+        #p3-a1{
+            position: absolute;
+            top: 35%;
+            width:5.5em;
+            left:20%;
+            -webkit-animation: page3_1 1.2s ease-in forwards;
+        }
+        @-webkit-keyframes page3_1 {
+            0% {
+                -webkit-transform:translateX(-100px);
+                opacity: 0;
+            }
+            100% {
+                -webkit-transform:translateX(0px);
+                opacity: 1;
+            }
+        }
+        #p3-a2{
+            position: absolute;
+            top: 35%;
+            width:5.5em;
+
+            right:20%;
+            -webkit-animation: page3_2 1.2s ease-in forwards;
+        }
+        @-webkit-keyframes page3_2 {
+            0% {
+                -webkit-transform:translateX(100px);
+                opacity: 0;
+            }
+            100% {
+                -webkit-transform:translateX(0px);
+                opacity: 1;
+            }
+        }
+        #p3-a3{
+            position: absolute;
+            top: 20%;
+            width:78%;
+            padding:0.8em;
+            margin:0 auto;
+            left:0;
+            line-height: 1.4em;
+            right:0;
+            -webkit-animation: page3_3 1.5s ease-in forwards;
+        }
+        @-webkit-keyframes page3_3 {
+            0% {
+                -webkit-transform:translateY(10px);
+                opacity: 0;
+            }
+            100% {
+                -webkit-transform:translateY(0px);
+                opacity: 1;
+            }
+        }
+        #p3-a4{
+            position: absolute;
+            bottom: 13%;
+            width:6.4em;
+            margin:0 auto;
+            left:0;
+            right:0;
+            line-height: 1.4em;
+            -webkit-animation: page3_3 1.5s ease-in forwards;
+        }
+        #p3-a5{
+            position: absolute;
+            bottom: 8%;
+            color:#FF4040;
+            text-align: center;
+            left:0;
+            right:0;
+            line-height: 1.4em;
+            -webkit-animation: page3_3 1.5s ease-in forwards;
+        }
 
     </style>
     <script>
@@ -321,7 +522,8 @@
     </aside>
     <audio src="//be-fe.github.io/static/audios/YouGotMe.mp3" autoplay="autoplay" loop="loop" id="autoplay"></audio>
     <div id="iSlider-arrow"></div>
-    <div id="p1-a1" class="pic cloud" style="display:none;"><img src="https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/yun1.png" alt=""></div>
+    <!--<div id="p1-a1" class="pic cloud" style="display:none;"><img src="https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/yun1.png" alt=""></div>-->
+
 
 
 <script src="./public/js/iSlider.js"></script>
@@ -336,8 +538,22 @@
             "    <div id=\"p1-a6\" class=\"pic\" style=\"display:none;\"><img src=\"https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/1_hailun.png\" alt=\"\"></div>\n" +
             "    <div id=\"p1-a7\" class=\"pic\" style=\"display:none;\"><img src=\"https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/1_title.png\" alt=\"\"></div>\n" +
             "    <div id=\"p1-a8\" class=\"pic\" style=\"display:none;\"><img src=\"https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/1_title1.png\" alt=\"\"></div></div>"},
-        {content: "https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/2.jpg"},
-        {content: "https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/3.jpg"},
+
+        {content: "<div style='width:100%;height:100%;background:url(https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/2_bg.jpg) center center no-repeat;background-size: cover;'> <div id=\"p2-a1\" class=\"pic\" style=\"display:none;\"><img src=\"https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/2_1.png\" alt=\"\"></div>\n" +
+            "    <div id=\"p2-a2\" class=\"pic\" style=\"display:none;\"><img src=\"https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/2_2.png\" alt=\"\"></div>\n" +
+            "    <div id=\"p2-a3\" class=\"pic\" style=\"display:none;\"><img src=\"https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/2_3.png\" alt=\"\"></div>\n" +
+            "    <div id=\"p2-a4\" class=\"pic\" style=\"display:none;\"><img src=\"https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/2_4.png\" alt=\"\"></div>\n" +
+            "    <div id=\"p2-a5\" class=\"ff\" style=\"display:none;\">近十年来，中国家庭教育支出规模年均复合增速为10.7%。</div>\n" +
+            "    <div id=\"p2-a6\" class=\"ff\" style=\"display:none;\">2015年/11500元 ---> 2018年/15600元</div>\n" +
+            "    <div id=\"p2-a7\" class=\"ff\" style=\"display:none;\">2016年二孩政策实行，这一年新生人口达到1786万人，效应明显。</div>\n" +
+            "    <div id=\"p2-a8\" class=\"ff\" style=\"display:none;\">2017年，中国城镇居民每百户家庭的钢琴拥有量为5.82台。预计到2020年，百户家庭钢琴拥有量可达8.62台。</div>\n" +
+            "    <div id=\"p2-a9\" class=\"ff bg_fz\" style=\"display:none;\">研发能力弱，没有专业的标准教学教材。缺乏专业的师资培训。</div></div>"},
+
+        {content: "<div style='width:100%;height:100%;background:url(https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/3_bg.jpg) center center no-repeat;background-size: cover;'> <div id=\"p3-a1\" class=\"pic\" style=\"display:none;\"><img src=\"https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/3_1.png\" alt=\"\"> <span class=\"name bg_fz\">俞峰</span></div>\n" +
+            "    <div id=\"p3-a2\" class=\"pic\" style=\"display:none;\"><img src=\"https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/3_2.png\" alt=\"\"><span class=\"name bg_fz\">孔 聪</span></div>\n" +
+            "    <div id=\"p3-a3\" class=\"bg_fz\" style=\"display:none;\">央音海伦智能钢琴实验课室”是由中央音乐学院俞峰院长牵头，央音继教学院孔聪院长组织中央音乐学院专家教研团队，精心编写的针对一对多钢琴学习的系列教材</div>\n" +
+            "    <div id=\"p3-a4\" class=\"pic\" style=\"display:none;\"><img src=\"https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/3_3.png\" alt=\"\"></div>\n" +
+            "    <p id=\"p3-a5\" class=\"p3_foot\"  style=\"display:none;\">央音海伦智能钢琴实验课室项目授权书</p></div>"},
         {content: "https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/4.jpg"},
         {content: "https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/5.jpg"},
         {content: "https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/6.jpg"},
@@ -375,6 +591,7 @@
             $block('p1-a6',600);
             $block('p1-a7',1600);
             $block('p1-a8',1100);
+
         },
         onslidechange: function (idx) {
             if (idx === 0) {
@@ -386,19 +603,26 @@
                 $block('p1-a6',600);
                 $block('p1-a7',1600);
                 $block('p1-a8',1100);
-            }else{
-                $none('p1-a1');
-                $none('p1-a2');
-                $none('p1-a3');
-                $none('p1-a4');
-                $none('p1-a5');
-                $none('p1-a6');
-                $none('p1-a7');
-                $none('p1-a8');
             }
 
-
-
+            if (idx === 1) {
+                $block('p2-a1',200);
+                $block('p2-a2',400);
+                $block('p2-a3',600);
+                $block('p2-a4',800);
+                $block('p2-a5',1000);
+                $block('p2-a6',1100);
+                $block('p2-a7',1200);
+                $block('p2-a8',1300);
+                $block('p2-a9',1500);
+            }
+            if (idx === 2) {
+                $block('p3-a1',200);
+                $block('p3-a2',400);
+                $block('p3-a3',400);
+                $block('p3-a4',400);
+                $block('p3-a5',400);
+            }
 
 
             if (this.isLooping === false) {
