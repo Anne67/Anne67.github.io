@@ -1,0 +1,1372 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8"/>
+    <title>诚邀加盟</title>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no"/>
+    <link href="public/css/iSlider.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/animate.css/3.7.2/animate.css" rel="stylesheet">
+    <script type="text/javascript">
+        //获取视窗宽度
+        function getSize(){
+            var htmlWidth = document.documentElement.clientWidth || document.body.clientWidth;
+            console.log(htmlWidth);
+
+            var htmlDom = document.getElementsByTagName('html')[0];
+            htmlDom.style.fontSize = htmlWidth /375*100 + 'px';
+        }
+        getSize();
+        window.addEventListener('resize', ()=>{
+            var htmlWidth = document.documentElement.clientWidth || document.body.clientWidth;
+        console.log(htmlWidth);
+
+        var htmlDom = document.getElementsByTagName('html')[0];
+        htmlDom.style.fontSize = htmlWidth /375*100 + 'px';
+        })
+    </script>
+    <style>
+        html,body{
+
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: #9e142d;
+            overflow: hidden;
+            font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+        }
+        .pa{
+            position: absolute;
+        }
+
+        /*ul wrapper*/
+        #iSlider-wrapper {
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            position: absolute;
+        }
+
+        #iSlider-wrapper ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        #iSlider-wrapper li {
+            position: absolute;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-box-pack: center;
+            -webkit-box-align: center;
+            list-style: none;
+        }
+
+        #iSlider-wrapper li img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        .music-btn {
+            float: right;
+            width: 1.8333333333333rem;
+            height: 1.8333333333333rem;
+            background: url('//be-fe.github.io/static/images/iSlider-card/music-icon.png');
+            background-size: cover;
+        }
+
+        .music-btn.on {
+            -webkit-animation: reverseRotataZ 1.2s linear infinite;
+        }
+
+        .media-wrap {
+            overflow: hidden;
+            position: fixed;
+            top: 0.6rem;
+            right: 0.3rem;
+            z-index: 10000;
+            width: 6.5em;
+            height: 6.5em;
+            font-size: 16px;
+        }
+
+        .media-wrap span {
+            float: left;
+            height: 4em;
+            width: 4em;
+            line-height: 3rem;
+            color: #fff;
+            font-size: 1em;
+        }
+
+        .media-wrap i {
+            width: 2.5em;
+            height: 2.5em;
+
+        }
+
+        @-webkit-keyframes reverseRotataZ {
+            0% {
+                -webkit-transform: rotateZ(0deg);
+            }
+            100% {
+                -webkit-transform: rotateZ(-360deg);
+            }
+        }
+
+        /* Arrow */
+        #iSlider-arrow {
+            position: absolute;
+            width: 0.5rem;
+            height: 0.5rem;
+            left: 0;
+            right: 0;
+            bottom: 14%;
+            margin: 0 auto;
+            border-top: 2px solid #fff;
+            border-right: 2px solid #fff;
+            z-index: 10000;
+            opacity: 0.8;
+            -webkit-animation: nextPage 1.2s linear infinite;
+        }
+        @-webkit-keyframes nextPage {
+            0% {
+                -webkit-transform: translateY(40px) rotate(-45deg);
+                opacity: 0.8;
+            }
+            50% {
+                -webkit-transform: translateY(20px) rotate(-45deg);
+                opacity: 0.4;
+            }
+            100% {
+                -webkit-transform: translateY(10px) rotate(-45deg);
+                opacity: 0;
+            }
+        }
+        .pic img{
+            width:100%;
+            height:100%;
+            position:absolute;
+        }
+        .bg_fz{
+            background:#ED574A;
+            color:#fff;
+            font-size: 0.14rem;
+            line-height: 0.18rem;
+            border-radius: 6px;
+        }
+        /*第一屏动画*/
+        #p1-a1{
+            width: 0.6rem;
+            height: 0.28rem;
+            left: 35px;
+            right: 0;
+            top: 42%;
+            z-index: 10000;
+            -webkit-animation: nextPage1 4s linear infinite;
+        }
+        @-webkit-keyframes nextPage1 {
+            0% {
+                -webkit-transform: translateX(20px);
+                opacity: 0.88;
+            }
+            50% {
+                -webkit-transform: translateY(6px);
+                opacity: 1;
+            }
+            100% {
+                -webkit-transform: translateX(20px);
+                opacity: 0.88;
+            }
+        }
+        #p1-a2{
+            width: 0.8rem;
+            height: 0.32em;
+            right: 50px;
+            top: 39%;
+            z-index: 10000;
+            -webkit-animation: nextPage2 4.2s linear infinite;
+        }
+        @-webkit-keyframes nextPage2 {
+            0% {
+                -webkit-transform: translateX(18px);
+                opacity: 0.88;
+            }
+            50% {
+                -webkit-transform: translateY(8px);
+                opacity: 1;
+            }
+            100% {
+                -webkit-transform: translateX(18px);
+                opacity: 0.88;
+            }
+        }
+        #p1-a3{
+            width: 1.3rem;
+            height: 0.45rem;
+            right: 30px;
+            bottom: 24%;
+            z-index: 10000;
+            -webkit-animation: nextPage2 4.6s linear infinite;
+        }
+        /*@-webkit-keyframes nextPage3 {*/
+            /*0% {*/
+                /*-webkit-transform: translateX(15px);*/
+                /*opacity: 0.5;*/
+            /*}*/
+            /*50% {*/
+                /*-webkit-transform: translateX(10px);*/
+                /*opacity: 1;*/
+            /*}*/
+            /*100% {*/
+                /*-webkit-transform: translateX(15px);*/
+                /*opacity: 0.5;*/
+            /*}*/
+        /*}*/
+        #p1-a4{
+            width: 100%;
+            height:1.4rem;
+            right:0;
+            left:0;
+            bottom:0;
+            margin: 0 auto;
+            z-index: 1000;
+            transition: all 2s;
+            animation: nextPage4 1.2s ease-in forwards;
+
+        }
+        @-webkit-keyframes nextPage4 {
+            0% {
+                -webkit-transform: translateY(95px);
+                opacity: 0;
+            }
+            100% {
+                -webkit-transform: translateY(0px);
+                opacity: 1;
+            }
+        }
+        #p1-a5{
+            width: 1rem;
+            height: 0.75rem;
+            left: 0.6rem;
+            right: 0;
+            top: 10%;
+            z-index: 10000;
+            -webkit-animation: nextPage5 1.5s ease-in forwards;
+        }
+        @-webkit-keyframes nextPage5{
+            0% {
+                -webkit-transform: translateY(-100px);
+                opacity: 0.5;
+            }
+            25% {
+                -webkit-transform: translateY(0px);
+                opacity: 0.88;
+            }
+            60% {
+                -webkit-transform: translateY(-20px);
+                opacity: 1;
+            }
+            85% {
+                -webkit-transform: translateY(-10px);
+                opacity: 1;
+            }
+            100% {
+                -webkit-transform: translateY(0px);
+                opacity: 1;
+            }
+        }
+        #p1-a6{
+            width: 1rem;
+            height:0.75rem;
+            right: 0.6rem;
+            top: 10%;
+            z-index: 10000;
+            -webkit-animation: nextPage5 1.5s ease-in forwards;
+        }
+        #p1-a8{
+            width: 2.2rem;
+            height:0.9rem;
+            left:0;
+            right: 0;
+            margin:0 auto;
+            top: 23.5%;
+            z-index: 10000;
+            -webkit-animation: nextPage5 1.5s ease-in forwards;
+        }
+        #p1-a7{
+            width: 1.7rem;
+            height: 1.7rem;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            top: 43%;
+            z-index: 10000;
+            -webkit-animation: nextPage7 1.8s ease forwards;
+        }
+        @-webkit-keyframes nextPage7 {
+            0% {
+                -webkit-transform: rotate(0deg) scale(0.2);
+                opacity: 0.88;
+            }
+            30% {
+                -webkit-transform: rotate(720deg) scale(1.8);
+            }
+            75% {
+                -webkit-transform: rotate(1080deg) scale(0.2);
+            }
+            100% {
+                -webkit-transform:rotate(1080deg) scale(1.2);
+                opacity: 1;
+            }
+        }
+        /*!*第二屏动画*!*/
+        .tiao{
+            height: 0.22rem;
+            left: 0.25rem;
+        }
+        .ff{
+            font-size: 0.14rem;
+            color:#98122B;
+            width: 80%;
+            line-height: 0.20rem;
+            margin:0 auto;
+            left:0;
+            right: 0;
+            z-index: 10000;
+            -webkit-animation: page2_1 1.5s ease-in-out forwards;
+        }
+        #p2-a1{
+            width: 1.67rem;
+            top: 20%;
+            right:0;
+            z-index: 10000;
+            -webkit-animation: page2_1 0.8s ease-in-out forwards;
+        }
+        @-webkit-keyframes page2_1{
+            0% {
+                -webkit-transform: translateX(-100px);
+                opacity: 0.88;
+            }
+            100% {
+                -webkit-transform: translateX(0px);
+                opacity: 0.88;
+            }
+        }
+        #p2-a2{
+            width: 2.97rem;
+            right: 0;
+            top: 31%;
+            z-index: 10000;
+            -webkit-animation: page2_1 0.8s ease-in-out forwards;
+        }
+        #p2-a3{
+            width: 2.23rem;
+            right: 0;
+            top: 39%;
+            z-index: 10000;
+            -webkit-animation: page2_1 0.8s ease-in-out forwards;
+        }
+        #p2-a4{
+            width: 2.97rem;
+            right: 0;
+            top: 50%;
+            z-index: 10000;
+            -webkit-animation: page2_1 0.8s ease-in-out forwards;
+        }
+        @-webkit-keyframes page2_1 {
+            0% {
+                -webkit-transform:translateY(10px);
+                opacity: 0;
+            }
+            100% {
+                -webkit-transform:translateY(0px);
+                opacity: 1;
+            }
+        }
+        #p2-a5{
+            top: 24%;
+        }
+        #p2-a6{
+            top: 35%;
+        }
+        #p2-a7{
+            top:43%;
+        }
+        #p2-a8{
+            top: 54%;
+        }
+        #p2-a9{
+            bottom: 13%;
+            width:2.89rem;
+            padding:0.1rem;
+            height:0.48rem;
+            margin:0 auto;
+            font-size: 0.16rem;
+            color:#FEFEFE;
+            line-height: 0.24rem;
+            -webkit-animation: page2_9 1.5s ease-in forwards;
+        }
+        @-webkit-keyframes page2_9 {
+            0% {
+                -webkit-transform:translateY(200px);
+                opacity: 0;
+            }
+            100% {
+                -webkit-transform:translateY(0px);
+                opacity: 1;
+            }
+        }
+
+        /*!*第三屏动画*!*/
+        span.name{
+            position: absolute;
+            text-align: center;
+            display: block;
+            padding:0.02rem 0.05rem;
+            left:50%;
+            top:103.5%;
+            transform: translateX(-50%);
+        }
+        #p3-a1{
+            top: 34%;
+            width:0.88rem;
+            height:0.88rem;
+            left:20%;
+            -webkit-animation: page3_1 1.2s ease-in forwards;
+        }
+        @-webkit-keyframes page3_1 {
+            0% {
+                -webkit-transform:translateX(-100px);
+                opacity: 0;
+            }
+            100% {
+                -webkit-transform:translateX(0px);
+                opacity: 1;
+            }
+        }
+        #p3-a2{
+            top: 34%;
+            width:0.88rem;
+            height:0.88rem;
+            right:20%;
+            -webkit-animation: page3_2 1.2s ease-in forwards;
+        }
+        @-webkit-keyframes page3_2 {
+            0% {
+                -webkit-transform:translateX(100px);
+                opacity: 0;
+            }
+            100% {
+                -webkit-transform:translateX(0px);
+                opacity: 1;
+            }
+        }
+        #p3-a3{
+            top: 20%;
+            width:2.76rem;
+            padding:0.1rem;
+            margin:0 auto;
+            left:0;
+            font-size: 0.12rem;
+            line-height:0.16rem;
+            right:0;
+            -webkit-animation: page3_3 1.5s ease-in forwards;
+        }
+        @-webkit-keyframes page3_3 {
+            0% {
+                -webkit-transform:translateY(10px);
+                opacity: 0;
+            }
+            100% {
+                -webkit-transform:translateY(0px);
+                opacity: 1;
+            }
+        }
+        #p3-a4{
+            bottom: 13.5%;
+            width:1.1rem;
+            height:1.4rem;
+            margin:0 auto;
+            left:0;
+            right:0;
+            -webkit-animation: page3_3 1.5s ease-in forwards;
+        }
+        #p3-a5{
+            bottom: 8%;
+            color:#FF4040;
+            text-align: center;
+            left:0;
+            right:0;
+            font-size: 0.11rem;
+            line-height: 0.12rem;
+            -webkit-animation: page3_3 1.5s ease-in forwards;
+        }
+        /*第四屏动画*/
+        #p4-a1{
+            width: 1.52rem;
+            right: 0;
+            top: 21%;
+            z-index: 10000;
+            -webkit-animation: page2_1 0.8s ease-in-out forwards;
+        }
+        .rail{
+            width:2.9rem;
+            height:0.7rem;
+            background:#ED574A;
+            border-radius: 100px;
+            top:20%;
+            left:0;
+            right:0;
+            margin:0 auto;
+        }
+        #p4-a2{
+            top:29%;
+            -webkit-animation: page4_toRight 1s ease-in-out forwards;
+        }
+        #p4-a3{
+            top:44%;
+            -webkit-animation: page4_toLeft 1s ease-in-out forwards;
+        }
+        #p4-a4{
+            top:59%;
+            -webkit-animation: page4_toRight 1s ease-in-out forwards;
+        }
+        #p4-a5{
+            top:74%;
+            -webkit-animation: page4_toLeft 1s ease-in-out forwards;
+        }
+        @-webkit-keyframes page4_toRight {
+            0% {
+                -webkit-transform:translateX(-200px);
+                opacity: 0;
+            }
+            100% {
+                -webkit-transform:translateX(0px);
+                opacity: 1;
+            }
+        }
+        @-webkit-keyframes page4_toLeft {
+            0% {
+                -webkit-transform:translateX(200px);
+                opacity: 0;
+            }
+            100% {
+                -webkit-transform:translateX(0px);
+                opacity: 1;
+            }
+        }
+        .rail .rail_left_1, .rail .rail_left_2{
+            width:0.82rem;
+            height:0.82rem;
+            top:-0.06rem;
+        }
+        .rail_left_1{
+            margin-right:0.06rem;
+            left:-0.05rem;
+            -webkit-animation: page4_gunRight 1.2s ease-in-out forwards;
+        }
+        .rail_left_2{
+            margin-left:0.06rem;
+            right:-0.05rem;
+            -webkit-animation: page4_gunLeft 1.2s ease-in-out forwards;
+        }
+        .rail_right_1{
+            width:2.1rem;
+            color:#fff;
+            right:0;
+            -webkit-animation: page4_toTop 1.2s ease-in-out forwards;
+        }
+        .rail_right_2{
+            width:2.1rem;
+            color:#fff;
+            left:0;
+            -webkit-animation: page4_toTop 1.2s ease-in-out forwards;
+        }
+
+        .rail_right_1 span, .rail_right_2 span{
+            display: block;
+            font-size: 0.14rem;
+            padding:0.01rem;
+        }
+        .rail_right_2 span{
+            text-align: right;
+        }
+        .rail_right_1 p, .rail_right_2 p{
+            font-size: 0.01rem;
+            line-height: 0.14rem;
+            margin:0;
+            padding:0 0.02rem 0 0;
+        }
+        .rail_right_2 p{
+            padding:0 0 0 0.1rem;
+        }
+        @-webkit-keyframes page4_toTop {
+            0% {
+                -webkit-transform:translateY(50px);
+                opacity: 0;
+            }
+            100% {
+                -webkit-transform:translateX(0px);
+                opacity: 1;
+            }
+        }
+        @-webkit-keyframes page4_gunRight {
+            0% {
+                -webkit-transform: translateX(-200px) rotateZ(-360deg);
+                opacity: 0.5;
+            }
+            100% {
+                -webkit-transform: translateX(0px) rotate(0deg);
+                opacity: 1;
+            }
+        }
+        @-webkit-keyframes page4_gunLeft {
+            0% {
+                -webkit-transform: translateX(200px) rotateZ(360deg);
+                opacity: 0.5;
+            }
+            100% {
+                -webkit-transform: translateX(0px) rotate(0deg);
+                opacity: 1;
+            }
+        }
+        /*第五屏动画*/
+        #p5-a1{
+            width: 1.13rem;
+            height:0.22rem;
+            left:0.25rem;
+            transform: rotate(-90deg);
+            transform-origin:left bottom;
+            top: 21%;
+            z-index: 10000;
+            -webkit-animation: page5_zhuan 0.8s ease-in-out forwards;
+        }
+        @-webkit-keyframes page5_zhuan {
+            0% {
+                -webkit-transform:rotate(-90deg);
+                opacity:0;
+            }
+            100% {
+                -webkit-transform:rotate(0deg);
+                opacity:1;
+            }
+        }
+        #p5-a2{
+            top:20%;
+            width:0.7rem;
+            right:0.5rem;
+            height:0.3rem;
+            -webkit-animation: nextPage2 4.2s linear infinite;
+        }
+        .title{
+            color:#FF4040;
+            font-size: 0.16rem;
+            text-align: center;
+            left:0;
+            right:0;
+            margin:0 auto;
+        }
+        #p5-a3{
+            top:28%;
+            -webkit-animation: page4_toTop 1.2s ease-in-out forwards;
+        }
+        #p5-a4{
+            top:59%;
+            -webkit-animation: page4_toTop 1.2s ease-in-out forwards;
+        }
+        .pic_5{
+             width:2.32rem;
+             height:1.6rem;
+             margin:0 auto;
+             left:0;
+             right:0;
+         }
+        #p5-a5{
+            top:32%;
+            -webkit-animation: page5_up 1.8s ease-in-out forwards;
+        }
+        #p5-a6{
+            top:63%;
+            -webkit-animation: page5_down 1.8s ease-in-out forwards;
+        }
+        @-webkit-keyframes page5_up{
+            0% {
+                -webkit-transform:translateY(300px);
+                opacity:0;
+            }
+            100% {
+                -webkit-transform:translateY(0px);
+                opacity:1;
+            }
+        }
+        @-webkit-keyframes page5_down{
+            0% {
+                -webkit-transform:translateY(-300px);
+                opacity:0;
+            }
+            100% {
+                -webkit-transform:translateY(0px);
+                opacity:1;
+            }
+        }
+        /*第六屏动画*/
+        #p6-a1,#p7-a1,#p8-a1,#p9-a1,#p10-a1,#p11-a1{
+            width:1.7rem;
+            height:0.62rem;
+            background:url("https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/6_1.png") no-repeat;
+            background-size: cover;
+            top:10%;
+            left:0;
+            right:0;
+            margin:0 auto;
+            -webkit-animation: page5_down 1s ease-in-out forwards;
+        }
+        .title_6{
+            color:#fff;
+            height:0.22rem;
+            line-height: 0.22rem;
+            font-size: 0.16rem;
+            padding-left: 0.2rem;
+        }
+        #p6-a1-1,#p7-a1-1,#p8-a1-1,#p9-a1-1,#p10-a1-1,#p11-a1-1{
+            width:1.7rem;
+            height:0.62rem;
+            line-height: 0.62rem;
+            color:#fff;
+            font-size: 0.23rem;
+            letter-spacing: 0.12rem;
+            padding-left:0.2rem;
+            -webkit-animation: page5_down 1.2s ease-in-out forwards;
+        }
+        #p6-a2,#p7-a2,#p8-a2,#p9-a2,#p10-a2,#p11-a2{
+            width:1.13rem;
+            background:url("https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/6_2.png") no-repeat;
+            background-size: cover;
+            top:21%;
+            -webkit-animation: page4_toRight 1.2s ease-in-out forwards;
+        }
+        #p6-a3,#p8-a3,#p11-a3{
+            width:0.77rem;
+            background:url("https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/6_3.png") no-repeat;
+            background-size: cover;
+            top:41%;
+            -webkit-animation: page4_toRight 1.2s ease-in-out forwards;
+        }
+        #p6-a4{
+            width:1.13rem;
+            background:url("https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/6_2.png") no-repeat;
+            background-size: cover;
+            top:73%;
+            -webkit-animation: page4_toRight 1.2s ease-in-out forwards;
+        }
+        #p6-a2-1,#p6-a3-1,#p6-a4-1,#p7-a2-1,#p8-a2-1,#p8-a3-1,#p9-a2-1,#p10-a2-1,#p11-a2-1,#p11-a3-1{
+            -webkit-animation: page4_toRight 1.2s ease-in-out forwards;
+        }
+        #p6-a5{
+            top:25%;
+            -webkit-animation: page4_toTop 1.2s ease-in-out forwards;
+        }
+        #p6-a6{
+            width:1.74rem;
+            height:0.85rem;
+            top:28.5%;
+            left:0;
+            right:0;
+            margin:0 auto;
+            -webkit-animation: page5_down 1.4s ease-in-out forwards;
+        }
+        #p6-a7{
+            width:2.99rem;
+            top:45%;
+            font-size: 0.14rem;
+            line-height: 0.18rem;
+            -webkit-animation: page4_toTop 1.2s ease-in-out forwards;
+        }
+        #p6-a7 p{
+            padding:0;
+            margin:0;
+            text-align: left;
+        }
+        #p6-a8{
+            width:1.6rem;
+            height:1.1rem;
+            top:76%;
+            left:0;
+            right:0;
+            margin:0 auto;
+            -webkit-animation: page5_up 1.4s ease-in-out forwards;
+        }
+        .dabai,.ipiano{
+            position:absolute;
+            left:-0.5rem;
+            color:#FF4040;
+            font-size: 0.14rem;
+            top:50%;
+            transform: translateY(-50%);
+            display:block;
+        }
+        /*第七屏动画*/
+        #p7-a3{
+            width: 1.2rem;
+            height: 1.35rem;
+            background: url("https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/7_1.png") no-repeat;
+            background-size: cover;
+            top:25%;
+            left:50%;
+            -webkit-animation: page5_down 1.4s ease-in-out forwards;
+        }
+        .num{
+            position:absolute;
+            color:#FF4040;
+            display:block;
+            width:100%;
+            text-align: center;
+            font-size: 0.16rem;
+            letter-spacing: 0.05rem;
+            top:-17%;
+        }
+        .ipiano{
+            font-size: 0.16rem;
+            left:-1.3rem;
+            letter-spacing: 0.05rem;
+        }
+        .qin{
+            width: 1.2rem;
+            height: 1.2rem;
+            background:white;
+        }
+        .qin-left{
+            left:12%;
+            -webkit-animation: page4_toLeft 1.4s ease-in-out forwards;
+        }
+        .qin-right{
+            right:12%;
+            -webkit-animation:  page4_toRight 1.4s ease-in-out forwards;
+        }
+        #p7-a4{
+            /*background: url("https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/7_2.png") no-repeat;*/
+            background-size: cover;
+            top:48%;
+        }
+        #p7-a5{
+            /*background: url("https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/7_3.png") no-repeat;*/
+            background-size: cover;
+            top:48%;
+
+        }
+        #p7-a6{
+            /*background: url("https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/7_4.png") no-repeat;*/
+            background-size: cover;
+            top:70%;
+        }
+        #p7-a7{
+            /*background: url("https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/7_5.png") no-repeat;*/
+            background-size: cover;
+            top:70%;
+        }
+        /*第八屏动画*/
+        #p8-a2{
+            width:2.04rem;
+        }
+        #p8-a3{
+            width:1.16rem;
+        }
+        #p8-a4{
+            top:25%;
+            -webkit-animation: page4_toTop 1.6s ease-in-out forwards;
+        }
+        #p8-a5{
+            top:45%;
+            -webkit-animation: page4_toTop 1.6s ease-in-out forwards;
+        }
+        .cont_detail{
+            width:2.99rem;
+            margin:0 auto;
+            left:0;
+            right:0;
+        }
+        .cont_detail p{
+            line-height: 0.16rem;
+            margin:0.082rem;
+            padding:0;
+            text-align: left;
+            color:#9D132D;
+            font-weight: 600;
+            font-size: 0.13rem;
+        }
+        .cont_detail p::before{
+            content: '·';
+            position: absolute;
+            font-size: 0.2rem;
+            font-weight: 900;
+            color:#ED574A;
+            left:-0.04rem;
+            /*top:0;*/
+        }
+        /*第九,十屏动画*/
+        #p9-a2,#p10-a2{
+            width:1.17rem;
+        }
+        #p9-a3,#p10-a3{
+            top:25%;
+            -webkit-animation: page4_toTop 2.8s ease-in-out forwards;
+        }
+        #p10-a3 p{
+            line-height: 0.4rem;
+        }
+        /*第十一屏动画*/
+        #p11-a2{
+            width:1.16rem;
+        }
+        #p11-a3{
+            width:1.16rem;
+            top:47.5%;
+        }
+        #p11-a4 p,#p11-a5 p{
+            line-height: 0.2rem;
+            margin:0.1rem 0.06rem;
+        }
+        #p11-a4{
+            top:24%;
+            -webkit-animation: page4_toTop 1.6s ease-in-out forwards;
+        }
+        #p11-a5{
+            top:51%;
+            -webkit-animation: page4_toTop 1.6s ease-in-out forwards;
+        }
+        /*第十二屏动画*/
+        #p12-a1 {
+            width: 0.6rem;
+            height: 0.28rem;
+            right: 35px;
+            top: 42%;
+            z-index: 10000;
+            -webkit-animation: nextPage1 4s linear infinite;
+        }
+        #p12-a2{
+
+        }
+        #p12-a3{
+            width:1.2rem;
+            height:0.422rem;
+            left:0.1rem;
+            bottom: 32%;
+            z-index: 10000;
+            -webkit-animation: nextPage2 4.6s linear infinite;
+        }
+        #p12-a5{
+            width: 1rem;
+            height: 0.75rem;
+            left: 0.6rem;
+            right: 0;
+            top: 10%;
+            z-index: 10000;
+            -webkit-animation: page4_toLeft 1.5s ease-in forwards;
+        }
+        #p12-a6{
+            width: 1rem;
+            height:0.75rem;
+            right: 0.6rem;
+            top: 10%;
+            z-index: 10000;
+            -webkit-animation: page4_toRight 1.5s ease-in forwards;
+        }
+        #p12-a7{
+            width: 1.45rem;
+            height: 1.45rem;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            top: 44.5%;
+            z-index: 10000;
+            -webkit-animation: page5_down 1.2s ease forwards;
+        }
+        #p12-a8{
+            width: 1.8rem;
+            height:1.8rem;
+            left:0;
+            right: 0;
+            margin:0 auto;
+            top: 21.5%;
+            z-index: 10000;
+            -webkit-animation: page5_up 1.2s ease-in forwards;
+        }
+        .contact{
+            left:0;
+            right:0;
+            margin:0 auto;
+            -webkit-animation: page4_toTop 1.2s ease-in forwards;
+        }
+        #p12-a2{
+            width:1.28rem;
+            height:0.26rem;
+            bottom:28.6%;
+        }
+        #p12-a4{
+            width:1.85rem;
+            height:0.48rem;
+            bottom:18.8%;
+        }
+        #p12-a9{
+            width:1.85rem;
+            height:0.5rem;
+            bottom:9.8%;
+        }
+
+
+    </style>
+    <script>
+
+    </script>
+</head>
+
+<body>
+
+
+    <!-- Outer Canvas 外层画布 -->
+    <div id="iSlider-wrapper"></div>
+    <aside class="media-wrap">
+        <span id="musicBtnTxt" style="display: none;">关闭</span>
+        <i id="musicBtn" class="music-btn on"></i>
+    </aside>
+    <audio src="//be-fe.github.io/static/audios/YouGotMe.mp3" autoplay="autoplay" loop="loop" id="autoplay"></audio>
+    <div id="iSlider-arrow"></div>
+    <!--<div id="p1-a1" class="pic cloud" style="display:none;"><img src="https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/yun1.png" alt=""></div>-->
+
+
+
+<script src="./public/js/iSlider.js"></script>
+<script type="text/javascript" src="public/js/iSlider.plugin.zoompic.js"></script>
+<script id="show-code">
+    var list = [
+        {content: ` <div style='width:100%;height:100%;background:url(https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/1_bg.jpg) no-repeat;background-size: 100% 100%;'></div>
+        <div id="p1-a1" class="pa pic cloud" style="display:none;"><img src="https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/yun1.png" alt=""></div>
+        <div id="p1-a2" class="pa pic cloud" style="display:none;"><img src="https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/yun2.png" alt=""></div>
+        <div id="p1-a3" class="pa pic cloud" style="display:none;"><img src="https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/yun3.png" alt=""></div>
+        <div id="p1-a4" class="pa pic tam" style="display:none;"><img src="https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/1_tiananmen.png" alt=""></div>
+        <div id="p1-a5" class="pa pic" style="display:none;"><img src="https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/1_yangyin.png" alt=""></div>
+        <div id="p1-a6" class="pa pic" style="display:none;"><img src="https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/1_hailun.png" alt=""></div>
+        <div id="p1-a7" class="pa pic" style="display:none;"><img src="https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/1_title.png" alt=""></div>
+        <div id="p1-a8" class="pa pic" style="display:none;"><img src="https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/1_title1.png" alt=""></div>
+    `},
+        {content: `<div style='width:100%;height:100%;background:url(https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/2_bg.jpg)  no-repeat;background-size: 100% 100%;'></div>
+        <div id="p2-a1" class="pa pic tiao" style="display:none;"><img src="https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/2_1.png" alt=""></div>
+        <div id="p2-a2" class="pa pic tiao" style="display:none;"><img src="https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/2_2.png" alt=""></div>
+        <div id="p2-a3" class="pa pic tiao" style="display:none;"><img src="https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/2_3.png" alt=""></div>
+        <div id="p2-a4" class="pa pic tiao" style="display:none;"><img src="https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/2_4.png" alt=""></div>
+        <div id="p2-a5" class="pa ff" style="display:none;">近十年来，中国家庭教育支出规模年均复合增速为10.7%。</div>
+        <div id="p2-a6" class="pa ff" style="display:none;">2015年/11500元 ---> 2018年/15600元</div>
+        <div id="p2-a7" class="pa ff" style="display:none;">2016年二孩政策实行，这一年新生人口达到1786万人，效应明显。</div>
+        <div id="p2-a8" class="pa ff" style="display:none;">2017年，中国城镇居民每百户家庭的钢琴拥有量为5.82台。预计到2020年，百户家庭钢琴拥有量可达8.62台。</div>
+        <div id="p2-a9" class="pa ff bg_fz" style="display:none;">研发能力弱，没有专业的标准教学教材。缺乏专业的师资培训。</div>`
+    },
+        {content: `<div style='width:100%;height:100%;background:url(https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/3_bg.jpg) no-repeat;background-size: 100% 100%;'>
+        <div id="p3-a1" class="pa pic" style="display:none;"><img src="https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/3_1.png" alt="">
+            <span class="name bg_fz">俞峰</span>
+        </div>
+        <div id="p3-a2" class="pa pic" style="display:none;"><img src="https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/3_2.png" alt="">
+            <span class="name bg_fz">孔 聪</span>
+        </div>
+        <div id="p3-a3" class="pa bg_fz" style="display:none;">央音海伦智能钢琴实验课室”是由中央音乐学院俞峰院长牵头，央音继教学院孔聪院长组织中央音乐学院专家教研团队，精心编写的针对一对多钢琴学习的系列教材</div>
+        <div id="p3-a4" class="pa pic" style="display:none;">
+            <img src="https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/3_3.png" alt="">
+        </div>
+        <p id="p3-a5" class="pa p3_foot"  style="display:none;">央音海伦智能钢琴实验课室项目授权书</p>
+    </div>`},
+        {content: `<div style='width:100%;height:100%;background:url(https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/4_bg.jpg) no-repeat;background-size: 100% 100%;'></div>
+<div id="p4-a1" class="pa pic tiao" style="display:none;"><img src="https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/4_1.png" alt=""></div>
+    <div id="p4-a2" class="pa pic rail" style="display:none;">
+        <div id="p4-a2-1" class="pa rail_left_1" style="display:none;">
+            <img src="https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/4_3.png" alt="">
+        </div>
+        <div id="p4-a2-2" class="pa rail_right_1" style="display:none;">
+            <span>常桦</span>
+            <p>中央音乐学院附中钢琴教授，青年钢琴教育家。因出色的指导学生多次荣获各类钢琴比赛中的“最佳指导教师奖”。</p>
+        </div>
+    </div>
+    <div id="p4-a3" class="pa pic rail" style="display:none;">
+        <div id="p4-a3-1" class="pa rail_left_2" style="display:none;">
+            <img src="https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/4_4.png" alt="">
+        </div>
+        <div id="p4-a3-2" class="pa rail_right_2" style="display:none;">
+            <span>张樱</span>
+            <p>中央音乐学院钢琴教师，师从周广仁，吴迎教授。指导的多名学生在国内外钢琴比赛中获奖。</p>
+        </div>
+    </div>
+    <div id="p4-a4" class="pa pic rail" style="display:none;">
+        <div id="p4-a4-1" class="pa rail_left_1" style="display:none;">
+            <img src="https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/4_5.png" alt="">
+        </div>
+        <div id="p4-a4-2" class="pa rail_right_1" style="display:none;">
+            <span>可子叶</span>
+            <p>中央音乐学院钢琴教师，师从李昕、魏小凡老师。赴德国学习指挥，师从首席指挥Mathias Husmann。</p>
+        </div>
+    </div>
+    <div id="p4-a5" class="pa pic rail" style="display:none;">
+        <div id="p4-a5-1" class="pa rail_left_2" style="display:none;">
+            <img src="https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/4_6.png" alt="">
+        </div>
+        <div id="p4-a5-2" class="pa rail_right_2" style="display:none;">
+            <span>丁波礼</span>
+            <p>中央音乐学院钢琴教师，师从付占文、莽璋老师。在教学上熟悉儿童心理发展规律,培养出众多优秀学生。</p>
+        </div>
+    </div>
+`},
+        {content: `<div style='width:100%;height:100%;background:url(https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/5_bg.jpg) no-repeat;background-size: 100% 100%;'><div id="p5-a1" class="pa pic" style="display:none;"><img src="https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/5_1.png" alt=""></div>
+    <div id="p5-a2" class="pa pic" style="display:none;"><img src="https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/5_2.png" alt=""></div>
+    <div id="p5-a3" class="pa title title_1" style="display:none;">乐理知识+动画游戏</div>
+    <div id="p5-a4" class="pa title title_2" style="display:none;">APP教材</div>
+    <div id="p5-a5" class="pa pic pic_5" style="display:none;"><img src="https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/5_3.png" alt=""></div>
+    <div id="p5-a6" class="pa pic pic_5" style="display:none;"><img src="https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/5_4.png" alt=""></div></div>`},
+        {content: `<div style='width:100%;height:100%;background:url(https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/6_bg.jpg) no-repeat;background-size: 100% 100%;'>
+<div id="p6-a1" class="pa pic" style="display:none;"><div id="p6-a1-1" class="pa" style="display:none;">教学环境</div></div>
+    <div id="p6-a2" class="pa pic tiao" style="display:none;"><div id="p6-a2-1" class="pa title_6" style="display:none;">智能教室</div></div>
+    <div id="p6-a3" class="pa pic tiao" style="display:none;"><div id="p6-a3-1" class="pa title_6" style="display:none;">教具</div></div>
+    <div id="p6-a4" class="pa pic tiao " style="display:none;"><div id="p6-a4-1" class="pa title_6" style="display:none;">智能钢琴</div></div>
+    <div id="p6-a5" class="pa pic title" style="display:none;">央音海伦智能钢琴教室效果图</div>
+    <div id="p6-a6" class="pa pic" style="display:none;"><img src="https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/6_4.png" alt=""></div>
+    <div id="p6-a7" class="pa pic title" style="display:none;"><p>每一套“海伦智能钢琴教室”，由甲方海伦钢琴负责向乙方投资提供“海伦智能钢琴”全套教具（7 台智能电钢琴），合计价值（按照海伦钢琴官网统一指导价格）金额人民币 7.58 万元。</p></br> <p>海伦钢琴授权乙方配套“海伦智能钢琴教室”产品经销权——海伦智能钢琴系列 ipiano 原声智能钢琴（A122.A126)，大白智能钢琴，Q 系列智能钢琴。乙方所需购置上述 3 台智能钢琴样品，每台按出厂价打九折优惠。</p></div>
+    <div id="p6-a8" class="pa pic" style="display:none;"><img src="https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/6_5.png" alt=""> <b class="dabai">大白</b></div></div>`},
+        {content: `<div style='width:100%;height:100%;background:url(https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/6_bg.jpg) no-repeat;background-size: 100% 100%;'><div id="p7-a1" class="pa pic" style="display:none;"><div id="p7-a1-1" class="pa" style="display:none;">教学环境</div></div>
+    <div id="p7-a2" class="pa pic tiao" style="display:none;"><div id="p7-a2-1" class="pa title_6" style="display:none;">智能钢琴</div></div>
+    <div id="p7-a3" class="pa" style="display:none;"><b class="ipiano">IPIANO-1</b></div>
+    <div id="p7-a4" class="pa qin qin-left" style="display:none;"><b class="num">Q1</b></div>
+    <div id="p7-a5" class="pa qin qin-right" style="display:none;"><b class="num">Q2</b></div>
+    <div id="p7-a6" class="pa qin qin-left" style="display:none;"><b class="num">A-122</b></div>
+    <div id="p7-a7" class="pa qin qin-right" style="display:none;"><b class="num">A-126</b></div></div>`},
+        {content: `<div style='width:100%;height:100%;background:url(https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/6_bg.jpg) no-repeat;background-size: 100% 100%;'>
+<div id="p8-a1" class="pa pic" style="display:none;"><div id="p8-a1-1" class="pa" style="display:none;">商务政策</div></div>
+    <div id="p8-a2" class="pa pic tiao" style="display:none;"><div id="p8-a2-1" class="pa title_6" style="display:none;">加盟合作对象与条件</div></div>
+    <div id="p8-a3" class="pa pic tiao" style="display:none;"><div id="p8-a3-1" class="pa title_6" style="display:none;">加盟方式</div></div>
+    <div id="p8-a4" class="pa title cont_detail" style="display:none;"><p>海伦钢琴在册优秀经销商/代理商。</p><p>海伦艺术教育投资有限公司协议合作伙伴。</p><p>其他有业务市场开发能力和师训服务能力的团队，有教学能力和培训资源者优先。</p></div>
+    <div id="p8-a5" class="pa title cont_detail" style="display:none;"><p>授权加盟商使用“央音・海伦智能钢琴实验课室”品牌和“海伦”商标使用权。同时拥有 ”海伦智能钢琴教室 ”的加盟权限。</p><p>加盟商有权销售海伦钢琴旗下的智能钢琴及智能电钢系列(具体型号详见协议）。</p><p>海伦免费提供价值75800元的全套智钢教室设备予加盟商使用。</p><p>加盟商每年需支付品牌商标使用费5000元。</p><p>“央音・海伦智能钢琴实验课室”前五节课程免费使用，其他课程海伦提取15元（15%）/每人/每课时的学费分成；学生人数超过50人后，提取学费分成按7.5元（7.5%)/每人/每课时进行优惠。</p><p>加盟商若购买该设备则无课时费提成。</p></div>
+    </div>`},
+        {content: `<div style='width:100%;height:100%;background:url(https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/6_bg.jpg) no-repeat;background-size: 100% 100%;'><div id="p9-a1" class="pa pic" style="display:none;"><div id="p9-a1-1" class="pa" style="display:none;">商务政策</div></div>
+    <div id="p9-a2" class="pa pic tiao" style="display:none;"><div id="p9-a2-1" class="pa title_6" style="display:none;">加盟要求</div></div>
+    <div id="p9-a3" class="pa title cont_detail" style="display:none;"><p>加盟商可以是企业法人或个人，但签约后须具备合法经营资格。</p><p>省会城市经营用房要求在130平方以上（含30平方一对多教室，7平方以上一对一教室），标准低限需设置2套一对多“央音・海伦智能钢琴实验课室”及6间单独教学琴房。</p><p>省会城市区域范围内每年不低于设立“央音・海伦智能钢琴实验课室”5套，首期三年合同期内，标准低限为设立“央音・海伦智能钢琴实验课室”15套。</p><p>地级城市经营用房要求在90平方以上（含30平方一对多教室，7平方以上一对一教室），标准低限需设置1套一对多“央音・海伦智能钢琴实验课室”及3间单独教学琴房。</p><p>地级城市区域范围内每年不低于设立“央音・海伦智能钢琴实验课室”3套，首期三年合同期内，标准低限为设立“央音・海伦智能钢琴实验课室”9套。</p><p>加盟商提供经营场所，经海伦钢琴确认通过。</p></div></div>`},
+        {content: `<div style='width:100%;height:100%;background:url(https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/6_bg.jpg) no-repeat;background-size: 100% 100%;'> <div id="p10-a1" class="pa pic" style="display:none;"><div id="p10-a1-1" class="pa" style="display:none;">商务政策</div></div>
+    <div id="p10-a2" class="pa pic tiao" style="display:none;"><div id="p10-a2-1" class="pa title_6" style="display:none;">加盟要求</div></div>
+    <div id="p10-a3" class="pa title cont_detail" style="display:none;"><p>合作协议签署后，加盟商应在6个月内开始运行“央音・海伦智能钢琴实验课室”半年试运行期内，海伦对加盟商的生源不作要求。试运营期结束后，加盟商每一套“央音・海伦智能钢琴实验课室”付费课时不少于每月80课时；如未达标准要求，海伦按每月80课时保底标准收取费用；如合作方继续经营半年后仍未达标准保底条件，合作合同解除终止，双方按实完成结算。海伦钢琴在该地区另行选择合作商。</p></div></div>`},
+        {content: `<div style='width:100%;height:100%;background:url(https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/6_bg.jpg) no-repeat;background-size: 100% 100%;'>
+    <div id="p11-a1" class="pa pic" style="display:none;"><div id="p11-a1-1" class="pa" style="display:none;">商务政策</div></div>
+    <div id="p11-a2" class="pa pic tiao" style="display:none;"><div id="p11-a2-1" class="pa title_6" style="display:none;">教学方法</div></div>
+    <div id="p11-a3" class="pa pic tiao" style="display:none;"><div id="p11-a3-1" class="pa title_6" style="display:none;">培训方案</div></div>
+    <div id="p11-a4" class="pa title cont_detail" style="display:none;"><p>课程（一）：如何打造魅力教师</p><p>课程（二）：钢琴基础教学法</p><p>课程（三）：央音考级经典作品讲解</p><p>课程（四）：央音海伦智能钢琴示范课</p><p>课程（五）：央音海伦智能钢琴课教案讲解</p></div>
+    <div id="p11-a5" class="pa title cont_detail" style="display:none;"><p>标准级培训（由海伦钢琴负责培训）。分别是经营与招生培训和APP软件操作培训，培训费用由海伦钢琴承担。</p><p>初、中、高级培训（由中央音乐学院负责培训）。培训费用3000元，由海伦钢琴承担2000元，加盟商受训或钢琴老师承担1000元/人。</p><p>通过培训的钢琴老师可取得由中央音乐学院颁发的初级、中级、高级培训合格证书（按培训教学规范，必须由低到高依次通过考核逐级取得初级、中级、高级培训合格证书）。</p></div>
+</div>`},
+        {content: `<div style='width:100%;height:100%;background:url(https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/6_bg.jpg) no-repeat;background-size: 100% 100%;'><div id="p12-a1" class="pa pic cloud" style="display:none;"><img src="https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/yun1.png" alt=""></div>
+    <div id="p12-a3" class="pa pic cloud" style="display:none;"><img src="https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/yun3.png" alt=""></div>
+    <div id="p12-a5" class="pa pic" style="display:none;"><img src="https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/1_yangyin.png" alt=""></div>
+    <div id="p12-a6" class="pa pic" style="display:none;"><img src="https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/1_hailun.png" alt=""></div>
+    <div id="p12-a7" class="pa pic" style="display:none;"><img src="https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/12_1.png" alt=""></div>
+    <div id="p12-a8" class="pa pic" style="display:none;"><img src="https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/1_title.png" alt=""></div>
+    <div id="p12-a2" class="pa pic contact" style="display:none;"><img src="https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/12_2.png" alt=""></div>
+    <div id="p12-a4" class="pa pic contact" style="display:none;"><img src="https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/12_3.png" alt=""></div>
+    <div id="p12-a9" class="pa pic contact" style="display:none;"><img src="https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/12_4.png" alt=""></div></div>
+
+    `}
+    ];
+
+    var $block = function(el,time){
+        setTimeout(function(){
+            document.getElementById(el).style.display='block';
+        },time)
+
+    };
+    var $none = function(el){
+        document.getElementById(el).style.display='none';
+    };
+
+    var islider = new iSlider({
+        data: list,
+        dom: document.getElementById("iSlider-wrapper"),
+        isOverspread: true,
+        isVertical: true,
+        isLooping: true,
+        animateType: 'card',
+        plugins: [['zoompic', {zoomFactor: 3}]],
+        oninitialized:function(){
+            $block('p1-a1',200);
+            $block('p1-a2',300);
+            $block('p1-a3',400);
+            $block('p1-a4',100);
+            $block('p1-a5',100);
+            $block('p1-a6',600);
+            $block('p1-a7',1600);
+            $block('p1-a8',1100);
+
+        },
+        onslidechange: function (idx) {
+            if (idx === 0) {
+                $block('p1-a1',200);
+                $block('p1-a2',300);
+                $block('p1-a3',400);
+                $block('p1-a4',100);
+                $block('p1-a5',100);
+                $block('p1-a6',600);
+                $block('p1-a7',1600);
+                $block('p1-a8',1100);
+            }
+            if (idx === 1) {
+                $block('p2-a1',200);
+                $block('p2-a2',400);
+                $block('p2-a3',600);
+                $block('p2-a4',800);
+                $block('p2-a5',1000);
+                $block('p2-a6',1100);
+                $block('p2-a7',1200);
+                $block('p2-a8',1300);
+                $block('p2-a9',1500);
+            }
+            if (idx === 2) {
+                $block('p3-a1',200);
+                $block('p3-a2',400);
+                $block('p3-a3',400);
+                $block('p3-a4',400);
+                $block('p3-a5',400);
+            }
+            if (idx === 3) {
+                $block('p4-a1',200);
+                $block('p4-a2',200);
+                $block('p4-a3',600);
+                $block('p4-a4',200);
+                $block('p4-a5',600);
+                $block('p4-a2-1',1800);
+                $block('p4-a2-2',1200);
+                $block('p4-a3-1',2000);
+                $block('p4-a3-2',1400);
+                $block('p4-a4-1',1800);
+                $block('p4-a4-2',1200);
+                $block('p4-a5-1',2000);
+                $block('p4-a5-2',1400);
+            }
+            if (idx === 4) {
+                $block('p5-a1',200);
+                $block('p5-a2',200);
+                $block('p5-a3',500);
+                $block('p5-a4',800);
+                $block('p5-a5',1000);
+                $block('p5-a6',1000);
+            }
+            if (idx === 5) {
+                $block('p6-a1',200);
+                $block('p6-a2',500);
+                $block('p6-a3',500);
+                $block('p6-a4',500);
+                $block('p6-a5',800);
+                $block('p6-a6',800);
+                $block('p6-a7',800);
+                $block('p6-a8',800);
+                $block('p6-a1-1',400);
+                $block('p6-a2-1',700);
+                $block('p6-a3-1',700);
+                $block('p6-a4-1',700);
+            }
+            if (idx === 6) {
+                $block('p7-a1',200);
+                $block('p7-a2',500);
+                $block('p7-a3',500);
+                $block('p7-a4',500);
+                $block('p7-a5',500);
+                $block('p7-a6',500);
+                $block('p7-a7',500);
+                $block('p7-a1-1',400);
+                $block('p7-a2-1',700);
+            }
+            if (idx === 7) {
+                $block('p8-a1',200);
+                $block('p8-a2',500);
+                $block('p8-a3',500);
+                $block('p8-a4',800);
+                $block('p8-a5',1000);
+                $block('p8-a1-1',400);
+                $block('p8-a2-1',700);
+                $block('p8-a3-1',700);
+            }
+            if (idx === 8) {
+                $block('p9-a1',200);
+                $block('p9-a2',500);
+                $block('p9-a3',800);
+                $block('p9-a1-1',400);
+                $block('p9-a2-1',700);
+                $block('p9-a3-1',700);
+            }
+            if (idx === 9) {
+                $block('p10-a1',200);
+                $block('p10-a2',500);
+                $block('p10-a3',800);
+                $block('p10-a1-1',400);
+                $block('p10-a2-1',700);
+                $block('p10-a3-1',700);
+            }
+            if (idx === 10) {
+                $block('p11-a1',200);
+                $block('p11-a2',500);
+                $block('p11-a3',500);
+                $block('p11-a4',800);
+                $block('p11-a5',1000);
+                $block('p11-a1-1',400);
+                $block('p11-a2-1',700);
+                $block('p11-a3-1',700);
+            }
+            if (idx === 11) {
+                $block('p12-a1',200);
+                $block('p12-a3',200);
+                $block('p12-a5',200);
+                $block('p12-a6',200);
+                $block('p12-a7',800);
+                $block('p12-a8',800);
+                $block('p12-a2',1000);
+                $block('p12-a4',1200);
+                $block('p12-a9',1400);
+            }
+
+
+
+
+            if (this.isLooping === false) {
+                if (idx === this.data.length - 1) {
+                    document.getElementById('iSlider-arrow').style.display = 'none';
+                }
+                else {
+                    document.getElementById('iSlider-arrow').style.display = 'block';
+                }
+            }
+        }
+    });
+
+    var audio = document.getElementById('autoplay');
+    var controller = document.getElementById('musicBtn');
+    var controllerHint = document.getElementById('musicBtnTxt');
+
+    document.getElementById('musicBtn').addEventListener('touchstart', function () {
+
+        controllerHint.style.display = '';
+        if (audio.paused) {
+            audio.play();
+            controller.className = 'music-btn on';
+            controllerHint.innerHTML = '开始';
+        } else {
+            audio.pause();
+            controller.className = 'music-btn';
+            controllerHint.innerHTML = '关闭';
+        }
+
+        setTimeout(function () {
+            controllerHint.style.display = 'none';
+        }, 1000);
+
+    }, false);
+
+
+</script>
+</body>
+</html>
