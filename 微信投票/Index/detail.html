@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<link href="http://pic.vshangtong.com/index/newvote/css/votemb.css" rel="stylesheet" type="text/css" />
+<link  href="http://wzl.vipshangcheng.com/index/newvote/css/banner-swiper.css?2014" rel="stylesheet" type="text/css" />
+<link  href="http://wzl.vipshangcheng.com/index/newvote/app/css/style.css?2014" rel="stylesheet" type="text/css" />
+<link  href="http://pic.vshangtong.com/index/css/yzm.css" rel="stylesheet" type="text/css" />
+<title>我是{$info.id}号选手{$info.title}请帮我投票!</title>
+<style>
+.hdtzan { background-color: #fff; padding: 10px; border-radius: 10px; margin-top: 15px; font-size: 14px; color: #00AD5D; display: block; }
+.hdtzan:active { color: #00AD5D; text-decoration: none; }
+.dcontianer .photo { border-radius: 0; border: 0; }
+.dcontianer .text { padding: 0 0 10px 0; }
+.dcontianer h1 { border-radius: 0; }
+
+.photoall img { max-width:100%}
+.bmtime{display: none;}
+.fmtel{display: none;}</style>
+
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js" type="text/javascript"></script>
+<script src="http://wzl.vipshangcheng.com/index/newvote/js/swipe.js" type="text/javascript"></script>
+</head>
+
+<body id="votemb">
+<script>
+var cangevoteit = true;
+</script>
+<div class="box02" id="search">
+  <div>
+    <form  id="searchform" action="" method="get" >
+      <input type="hidden" name="ac" value="voteapp" >
+      <input type="hidden" name="id" value="7537" >
+      <input type="hidden" name="tid" value="1222" >
+      <input name="keyword" type="search"  value="" placeholder="输入编号或者名称" class="input"/>
+      <button class="button">
+      <div class="search" ></div>
+      搜索</button>
+    </form>
+  </div>
+  <div class="clr"></div>
+</div>
+<div id="mcover" onclick="document.getElementById('mcover').style.display='none';document.getElementById('search').style.display='none';" > </div>
+<div id="mcover01" ><b onclick="document.getElementById('mcover01').style.display='none';"></b>
+  <div class="box01">
+    <h1>红银财富-最美女性摄影大赛作品，请你来投票！注：每个ID只限投10票，否则将做废票处理。排行榜</h1>
+    <div id="phb" > </div>
+  </div>
+</div>
+<div id="OKmcover" onclick="document.getElementById('OKmcover').style.display='none';" >
+  <div class="OKbox">恭喜你，投票成功！</div>
+</div>
+<div class="dcontianer "  style="padding:0">
+  <div class="photo">
+    <h1>{$info.id}号 {$info.title}</h1>
+    <div class="green">
+        <ul>
+          <li><span><b id="anums{$info.id}">{$info.pnum}</b></span>
+            <p>总票数</p>
+          </li>
+          <li><span><b>{$rank}</b></span>
+            <p>当前排名</p>
+          </li>
+        </ul>
+      </div>
+    <div class="nnnrrr">
+<div class="text">
+    <section id="xsinfo" class="photoall" >{$info.content}</section>
+    <div style="text-align: center;padding: 10px 5px 10px 5px;font-size: 14px;">备注：投票数据每10分钟更新一次。</div>
+</div>
+    <button class="button" id="span{$info.id}" onclick="voteid({$info.id},{$info.pnum},0)"  ><span id="votespan">投票</span></button>
+    <button class="button button_orgage"  onclick='gourl("{:U(\'Index/join\')}")' ><span >我要报名</span></button>
+    </div> 
+    <div class="clr"></div>
+  </div>
+</div>
+<section id="content" style="padding: 0 0 49px 0;">  </section>
+<script src="http://pic.vshangtong.com/index/js/play.js?20130601" type="text/javascript"></script>
+<div class="footermenu">
+    <ul>
+        <li class="fmhome"><a href="{:U('Index/index')}">
+                <p><img src="../Home/images/home.png" /></p>
+                <P>首页</P>
+            </a></li>
+        <li class="fmsearch"><a onclick="document.getElementById('mcover').style.display = 'block';document.getElementById('search').style.display = 'block';">
+                <p><img src="../Home/images/search.png" /></p>
+                搜索</a></li>
+        <li class="phbcss"><a onclick="getphb()">
+                <p><img src="../Home/images/Ranking.png" /></p>
+                排行</a></li>
+        <li class="fmtpbm"><a href="{:U('Index/join')}">
+                <p><img src="../Home/images/name.png" /></p>
+                报名</a></li>
+    </ul>
+</div>
+<script>
+var  ss=true;
+function gourl(url){
+ window.location.href=url;
+}
+var lsmbid=0;
+var lsnums=0;
+function voteid(mbid, nums, state) {
+    if (window.cangevoteit == false) {
+        alert('因无法获取你的位置（你拒绝了提供位置）或你当前位置不在投票允许的范围内,无法投票!');
+        return;
+    }
+    if (state > 0) {
+        alert('选手可能涉嫌刷票,已被临时限制投票,请联系活动举办方!');
+        return;
+    }
+    voteidit(mbid, nums, 0);
+}
+
+function voteidit(mbid, nums, ticket) {
+    var submitData = {
+        mbid: mbid,
+        ticket: ticket,
+    };
+    $.post("{:U('Index/do_vote')}", submitData, function (data) {
+        if (data.state == 'fail') {
+            $('.OKbox').html(data.msg);
+        } else if (data.state == 'success') {
+            nums = nums + 1;
+            $('#votespan').html('已投');
+            $('#anums' + mbid).html(nums);
+            $('#span' + mbid).attr('disabled', 'disabled');
+            $('.OKbox').html(data.msg);
+        } else {
+            $('.OKbox').html('网络繁忙');
+        }
+        document.getElementById('OKmcover').style.display = 'block';
+    },"json");
+}
+
+function getphb() {
+    $('#phb').load("{:U('index/rank')}");
+    document.getElementById('mcover01').style.display = 'block';
+}
+
+var strss = document.getElementById("xsinfo").innerHTML;
+document.getElementById("xsinfo").innerHTML = replaceReg(strss);
+</script> 
+</body>
+</html>

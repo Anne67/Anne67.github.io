@@ -6,7 +6,7 @@
     <meta name="viewport"
           content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no"/>
     <link href="public/css/iSlider.css" rel="stylesheet">
-    <link href="https://cdn.bootcss.com/animate.css/3.7.2/animate.css" rel="stylesheet">
+    <!--<link href="https://cdn.bootcss.com/animate.css/3.7.2/animate.css" rel="stylesheet">-->
     <script type="text/javascript">
         //获取视窗宽度
         function getSize(){
@@ -29,7 +29,6 @@
         html,body{
 
         }
-
         body {
             margin: 0;
             padding: 0;
@@ -216,20 +215,6 @@
             z-index: 10000;
             -webkit-animation: nextPage2 4.6s linear infinite;
         }
-        /*@-webkit-keyframes nextPage3 {*/
-            /*0% {*/
-                /*-webkit-transform: translateX(15px);*/
-                /*opacity: 0.5;*/
-            /*}*/
-            /*50% {*/
-                /*-webkit-transform: translateX(10px);*/
-                /*opacity: 1;*/
-            /*}*/
-            /*100% {*/
-                /*-webkit-transform: translateX(15px);*/
-                /*opacity: 0.5;*/
-            /*}*/
-        /*}*/
         #p1-a4{
             width: 100%;
             height:1.4rem;
@@ -1030,31 +1015,25 @@
 
 
     </style>
-    <script>
-
-    </script>
 </head>
 
 <body>
-
-
     <!-- Outer Canvas 外层画布 -->
     <div id="iSlider-wrapper"></div>
+    <!--音乐开关-->
     <aside class="media-wrap">
         <span id="musicBtnTxt" style="display: none;">关闭</span>
         <i id="musicBtn" class="music-btn on"></i>
     </aside>
     <audio src="//be-fe.github.io/static/audios/YouGotMe.mp3" autoplay="autoplay" loop="loop" id="autoplay"></audio>
+    <!--向上滑箭头指示-->
     <div id="iSlider-arrow"></div>
-    <!--<div id="p1-a1" class="pic cloud" style="display:none;"><img src="https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/yun1.png" alt=""></div>-->
-
-
 
 <script src="./public/js/iSlider.js"></script>
 <script type="text/javascript" src="public/js/iSlider.plugin.zoompic.js"></script>
 <script id="show-code">
     var list = [
-        {content: ` <div style='width:100%;height:100%;background:url(https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/1_bg.jpg) no-repeat;background-size: 100% 100%;'></div>
+        {content: ` <div style='width:100%;height:100%;background:url(https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/1_bg.jpg) no-repeat;background-size: 100% 100%;'>
         <div id="p1-a1" class="pa pic cloud" style="display:none;"><img src="https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/yun1.png" alt=""></div>
         <div id="p1-a2" class="pa pic cloud" style="display:none;"><img src="https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/yun2.png" alt=""></div>
         <div id="p1-a3" class="pa pic cloud" style="display:none;"><img src="https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/yun3.png" alt=""></div>
@@ -1062,9 +1041,8 @@
         <div id="p1-a5" class="pa pic" style="display:none;"><img src="https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/1_yangyin.png" alt=""></div>
         <div id="p1-a6" class="pa pic" style="display:none;"><img src="https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/1_hailun.png" alt=""></div>
         <div id="p1-a7" class="pa pic" style="display:none;"><img src="https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/1_title.png" alt=""></div>
-        <div id="p1-a8" class="pa pic" style="display:none;"><img src="https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/1_title1.png" alt=""></div>
-    `},
-        {content: `<div style='width:100%;height:100%;background:url(https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/2_bg.jpg)  no-repeat;background-size: 100% 100%;'></div>
+        <div id="p1-a8" class="pa pic" style="display:none;"><img src="https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/1_title1.png" alt=""></div></div>`},
+        {content: `<div style='width:100%;height:100%;background:url(https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/2_bg.jpg)  no-repeat;background-size: 100% 100%;'>
         <div id="p2-a1" class="pa pic tiao" style="display:none;"><img src="https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/2_1.png" alt=""></div>
         <div id="p2-a2" class="pa pic tiao" style="display:none;"><img src="https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/2_2.png" alt=""></div>
         <div id="p2-a3" class="pa pic tiao" style="display:none;"><img src="https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/2_3.png" alt=""></div>
@@ -1073,8 +1051,7 @@
         <div id="p2-a6" class="pa ff" style="display:none;">2015年/11500元 ---> 2018年/15600元</div>
         <div id="p2-a7" class="pa ff" style="display:none;">2016年二孩政策实行，这一年新生人口达到1786万人，效应明显。</div>
         <div id="p2-a8" class="pa ff" style="display:none;">2017年，中国城镇居民每百户家庭的钢琴拥有量为5.82台。预计到2020年，百户家庭钢琴拥有量可达8.62台。</div>
-        <div id="p2-a9" class="pa ff bg_fz" style="display:none;">研发能力弱，没有专业的标准教学教材。缺乏专业的师资培训。</div>`
-    },
+        <div id="p2-a9" class="pa ff bg_fz" style="display:none;">研发能力弱，没有专业的标准教学教材。缺乏专业的师资培训。</div></div>`},
         {content: `<div style='width:100%;height:100%;background:url(https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/3_bg.jpg) no-repeat;background-size: 100% 100%;'>
         <div id="p3-a1" class="pa pic" style="display:none;"><img src="https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/3_1.png" alt="">
             <span class="name bg_fz">俞峰</span>
@@ -1088,7 +1065,7 @@
         </div>
         <p id="p3-a5" class="pa p3_foot"  style="display:none;">央音海伦智能钢琴实验课室项目授权书</p>
     </div>`},
-        {content: `<div style='width:100%;height:100%;background:url(https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/4_bg.jpg) no-repeat;background-size: 100% 100%;'></div>
+        {content: `<div style='width:100%;height:100%;background:url(https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/4_bg.jpg) no-repeat;background-size: 100% 100%;'>
 <div id="p4-a1" class="pa pic tiao" style="display:none;"><img src="https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/4_1.png" alt=""></div>
     <div id="p4-a2" class="pa pic rail" style="display:none;">
         <div id="p4-a2-1" class="pa rail_left_1" style="display:none;">
@@ -1125,8 +1102,7 @@
             <span>丁波礼</span>
             <div>中央音乐学院钢琴教师，师从付占文、莽璋老师。在教学上熟悉儿童心理发展规律,培养出众多优秀学生。</div>
         </div>
-    </div>
-`},
+    </div></div>`},
         {content: `<div style='width:100%;height:100%;background:url(https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/5_bg.jpg) no-repeat;background-size: 100% 100%;'><div id="p5-a1" class="pa pic" style="display:none;"><img src="https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/5_1.png" alt=""></div>
     <div id="p5-a2" class="pa pic" style="display:none;"><img src="https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/5_2.png" alt=""></div>
     <div id="p5-a3" class="pa title title_1" style="display:none;">乐理知识+动画游戏</div>
@@ -1177,9 +1153,7 @@
     <div id="p12-a8" class="pa pic" style="display:none;"><img src="https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/1_title.png" alt=""></div>
     <div id="p12-a2" class="pa pic contact" style="display:none;"><img src="https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/12_2.png" alt=""></div>
     <div id="p12-a4" class="pa pic contact" style="display:none;"><img src="https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/12_3.png" alt=""></div>
-    <div id="p12-a9" class="pa pic contact" style="display:none;"><img src="https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/12_4.png" alt=""></div></div>
-
-    `}
+    <div id="p12-a9" class="pa pic contact" style="display:none;"><img src="https://wxhailun.oss-cn-hangzhou.aliyuncs.com/wx/12_4.png" alt=""></div></div>`}
     ];
 
     var $block = function(el,time){
@@ -1209,7 +1183,6 @@
             $block('p1-a6',600);
             $block('p1-a7',1600);
             $block('p1-a8',1100);
-
         },
         onslidechange: function (idx) {
             if (idx === 0) {
@@ -1335,9 +1308,6 @@
                 $block('p12-a4',1200);
                 $block('p12-a9',1400);
             }
-
-
-
 
             if (this.isLooping === false) {
                 if (idx === this.data.length - 1) {

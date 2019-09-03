@@ -1,0 +1,14 @@
+<table border="0">
+    <tr>
+        <th>排行</th>
+        <th>姓名</th>
+        <th>投票数</th>
+    </tr>
+    <volist name='rlist' id='v'>
+    <tr>
+        <td>{$key+1}</td>
+        <td>{$v.title}</td>
+        <td>{$v.pnum}</td>
+    </tr>
+    </volist>
+</table>
