@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body,html{
+            width:100%;
+            height:100%;
+            background-gra background: -webkit-linear-gradient(left top, lightgreen , lightskyblue,lightpink); /* Safari 5.1 - 6.0 */
+            background: -o-linear-gradient(bottom right,lightgreen , lightskyblue,lightpink); /* Opera 11.1 - 12.0 */
+            background: -moz-linear-gradient(bottom right,lightgreen , lightskyblue,lightpink); /* Firefox 3.6 - 15 */
+            background: linear-gradient(to bottom right, lightgreen , lightskyblue,lightpink); /* 标准的语法 */
+        }
+        header{
+            padding:10px;
+            text-align: center;
+            color:#fff;
+            font-family: 仿宋;
+        }
+        #water{
+            z-index:99;
+            width:90%;
+            margin:0 auto;
+        }
+        #water img{
+            border-radius: 10px;
+            box-shadow: 0 0 5px gray;
+            transition:all .5s;
+        }
+    </style>
+</head>
+<body>
+<div style="">
+    <img src="3.jpg" alt="" style="width:200px;padding:20px;">
+</div>
+    <header>
+        <h1 class="">肖战 瀑布流</h1>
+    </header>
+    <div id="water"></div>
+
+    <script src="./js/waterfall.js"></script>
+    <script>
+        var imgs = [];
+        for(let i=1;i<16;i++){
+            imgs.push("./images/"+ i + ".jpg");
+        }
+        createWaterInit(document.getElementById('water'),imgs)
+    </script>
+</body>
+</html>
